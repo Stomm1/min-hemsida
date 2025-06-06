@@ -2,21 +2,163 @@
 <html lang="sv">
 <head>
   <meta charset="UTF-8" />
-  <title>Min Hemsida</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Victor Stommendal</title>
   <style>
-    body {
-      font-family: sans-serif;
-      background: #f4f4f4;
-      margin: 0;
-      padding: 2rem;
+    * {
+      box-sizing: border-box;
     }
-    h1 {
-      color: #004aad;
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+
+    header {
+      background-color: #004aad;
+      color: white;
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+
+    nav {
+      background-color: #003080;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    nav a {
+      color: white;
+      padding: 1rem;
+      text-decoration: none;
+    }
+
+    nav a:hover {
+      background-color: #002060;
+    }
+
+    section {
+      padding: 2rem;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    footer {
+      background-color: #ddd;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 3rem;
+    }
+
+    img.profile {
+      max-width: 150px;
+      border-radius: 50%;
+      display: block;
+      margin: 1rem auto;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      max-width: 500px;
+      margin: auto;
+    }
+
+    form input, form textarea {
+      margin-bottom: 1rem;
+      padding: 0.8rem;
+      font-size: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    form button {
+      background-color: #004aad;
+      color: white;
+      padding: 0.8rem;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    form button:hover {
+      background-color: #002f75;
+    }
+
+    @media (max-width: 600px) {
+      nav a {
+        flex: 1 0 100%;
+        text-align: center;
+      }
+
+      section {
+        padding: 1rem;
+      }
     }
   </style>
 </head>
 <body>
-  <h1>Hej världen!</h1>
-  <p>Detta är min första hemsida, publicerad via GitHub Pages 🚀</p>
+
+  <header>
+    <h1>Victor Stommendal</h1>
+    <p>Min personliga hemsida – byggd med GitHub Pages 🚀</p>
+    <img src="profilbild.jpg" alt="Profilbild" class="profile" />
+  </header>
+
+  <nav>
+    <a href="#start">Start</a>
+    <a href="#studier">Studier</a>
+    <a href="#resor">Resor</a>
+    <a href="#cv">CV</a>
+    <a href="#kontakt">Kontakt</a>
+  </nav>
+
+  <section id="start">
+    <h2>Start</h2>
+    <p>Välkommen till min hemsida! Här kan du läsa om mig, mina studier, resor och se mitt CV.</p>
+  </section>
+
+  <section id="studier">
+    <h2>Mina studier</h2>
+    <p>Jag studerar [ämne] vid [skola/universitet]. Mina intressen inkluderar [ämnesområden, projekt eller kurser].</p>
+  </section>
+
+  <section id="resor">
+    <h2>Mina resor</h2>
+    <p>Jag älskar att upptäcka världen. Här är några av mina favoritresmål:</p>
+    <ul>
+      <li>🇯🇵 Tokyo – teknologi och kultur</li>
+      <li>🇪🇸 Barcelona – sol, strand och arkitektur</li>
+      <li>🇺🇸 San Francisco – tech och natur</li>
+    </ul>
+  </section>
+
+  <section id="cv">
+    <h2>CV & Personligt brev</h2>
+    <p>Här kan du ladda ner mina dokument:</p>
+    <ul>
+      <li><a href="cv.pdf" target="_blank">📄 Mitt CV</a></li>
+      <li><a href="personligt-brev.pdf" target="_blank">📄 Personligt brev</a></li>
+    </ul>
+  </section>
+
+  <section id="kontakt">
+    <h2>Kontakt</h2>
+    <form>
+      <input type="text" placeholder="Ditt namn" required />
+      <input type="email" placeholder="Din e-post" required />
+      <textarea rows="5" placeholder="Ditt meddelande" required></textarea>
+      <button type="submit">Skicka</button>
+    </form>
+    <p style="text-align:center; margin-top: 1rem;">Eller maila mig på <a href="mailto:exempel@email.com">exempel@email.com</a></p>
+  </section>
+
+  <footer>
+    <p>© 2025 Victor Stommendal – Alla rättigheter förbehållna</p>
+  </footer>
+
 </body>
 </html>
