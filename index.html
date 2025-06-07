@@ -27,14 +27,26 @@
     }
 
     header {
-      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem;
       padding: 3rem 1rem;
       background: linear-gradient(to right, #202020, #2a2a2a);
+      flex-wrap: wrap;
     }
 
     header h1 {
       font-size: 2.5rem;
       color: var(--accent);
+    }
+
+    .profile-pic {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid white;
     }
 
     nav {
@@ -85,13 +97,15 @@
       gap: 1rem;
       margin-top: 1rem;
       flex-wrap: wrap;
+      align-items: center;
     }
 
     .logos img {
-      height: 50px;
-      background: white;
-      border-radius: 5px;
-      padding: 0.5rem;
+      height: 60px;
+      object-fit: contain;
+      background-color: white;
+      padding: 0.3rem;
+      border-radius: 6px;
     }
 
     footer {
@@ -134,24 +148,13 @@
     button:hover {
       background-color: #3c7ce6;
     }
-
-    .linkedin-link {
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-      margin-top: 1rem;
-    }
-
-    .linkedin-link img {
-      height: 24px;
-    }
   </style>
 </head>
 <body>
 
   <header>
     <h1>Victor Stommendal</h1>
-    <p>Personlig hemsida – GitHub Pages 🚀</p>
+    <img src="profil.jpg" alt="Profilbild" class="profile-pic" />
   </header>
 
   <nav>
@@ -164,10 +167,10 @@
   <main class="container">
     <div class="card" id="studier">
       <h2>🎓 Studier</h2>
-      <p>Jag studerar [ämne] på Chalmers tekniska högskola med inriktning mot Globala Systems.</p>
+      <p>Jag studerar [ämne] på Chalmers med inriktning mot Globala Systems. Mitt fokus ligger på [ämnen eller projekt].</p>
       <div class="logos">
-        <img src="chalmers.png" alt="Chalmers logga" />
-        <img src="globala-systems.png" alt="Globala Systems logga" />
+        <img src="chalmers.png" alt="Chalmers logotyp" />
+        <img src="globala-systems.png" alt="Globala Systems logotyp" />
       </div>
     </div>
 
@@ -182,16 +185,13 @@
     </div>
 
     <div class="card" id="cv">
-      <h2>📄 CV & Personligt brev</h2>
-      <p>Ladda ner mina dokument:</p>
+      <h2>📄 CV & LinkedIn</h2>
       <ul>
         <li><a href="cv.pdf" target="_blank">📄 CV (PDF)</a></li>
         <li><a href="personligt-brev.pdf" target="_blank">📄 Personligt brev (PDF)</a></li>
+        <li><a href="https://www.linkedin.com/in/victor-stommendal-victor-stommendal/" target="_blank">
+          🌐 Min LinkedIn-profil</a></li>
       </ul>
-      <div class="linkedin-link">
-        <img src="linkedin-icon.png" alt="LinkedIn" />
-        <a href="https://www.linkedin.com/in/victor-stommendal-victor-stommendal/" target="_blank">Min LinkedIn-profil</a>
-      </div>
     </div>
 
     <div class="card" id="kontakt">
