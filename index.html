@@ -83,12 +83,15 @@
     .logos {
       display: flex;
       gap: 1rem;
-      align-items: center;
       margin-top: 1rem;
+      flex-wrap: wrap;
     }
 
     .logos img {
       height: 50px;
+      background: white;
+      border-radius: 5px;
+      padding: 0.5rem;
     }
 
     footer {
@@ -131,6 +134,17 @@
     button:hover {
       background-color: #3c7ce6;
     }
+
+    .linkedin-link {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-top: 1rem;
+    }
+
+    .linkedin-link img {
+      height: 24px;
+    }
   </style>
 </head>
 <body>
@@ -150,10 +164,10 @@
   <main class="container">
     <div class="card" id="studier">
       <h2>🎓 Studier</h2>
-      <p>Jag studerar Globala System på Chalmers Tekniska Högskola. Mitt fokus ligger på hållbar utveckling, teknik och samhälle.</p>
+      <p>Jag studerar [ämne] på Chalmers tekniska högskola med inriktning mot Globala Systems.</p>
       <div class="logos">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/7/79/Chalmers_logo_white.png" alt="Chalmers logga" />
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Globe_icon.svg/240px-Globe_icon.svg.png" alt="Globala Systems logga" />
+        <img src="chalmers.png" alt="Chalmers logga" />
+        <img src="globala-systems.png" alt="Globala Systems logga" />
       </div>
     </div>
 
@@ -173,8 +187,11 @@
       <ul>
         <li><a href="cv.pdf" target="_blank">📄 CV (PDF)</a></li>
         <li><a href="personligt-brev.pdf" target="_blank">📄 Personligt brev (PDF)</a></li>
-        <li><a href="https://www.linkedin.com/in/victor-stommendal-victor-stommendal/" target="_blank">🔗 LinkedIn-profil</a></li>
       </ul>
+      <div class="linkedin-link">
+        <img src="linkedin-icon.png" alt="LinkedIn" />
+        <a href="https://www.linkedin.com/in/victor-stommendal-victor-stommendal/" target="_blank">Min LinkedIn-profil</a>
+      </div>
     </div>
 
     <div class="card" id="kontakt">
