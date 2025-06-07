@@ -4,7 +4,6 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Victor Stommendal</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <style>
     :root {
       --bg: #121212;
@@ -29,15 +28,8 @@
 
     header {
       text-align: center;
-      padding: 3rem 1rem 2rem;
+      padding: 3rem 1rem;
       background: linear-gradient(to right, #202020, #2a2a2a);
-    }
-
-    header img {
-      width: 120px;
-      border-radius: 50%;
-      margin-bottom: 1rem;
-      border: 3px solid var(--accent);
     }
 
     header h1 {
@@ -81,16 +73,22 @@
       padding: 2rem;
       border-radius: 10px;
       box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
-      transition: transform 0.3s ease;
-    }
-
-    .card:hover {
-      transform: scale(1.02);
     }
 
     .card h2 {
       color: var(--accent);
       margin-bottom: 1rem;
+    }
+
+    .logos {
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+      margin-top: 1rem;
+    }
+
+    .logos img {
+      height: 50px;
     }
 
     footer {
@@ -133,33 +131,30 @@
     button:hover {
       background-color: #3c7ce6;
     }
-
-    @media (max-width: 600px) {
-      header h1 {
-        font-size: 1.8rem;
-      }
-    }
   </style>
 </head>
 <body>
 
   <header>
-    <img src="profilbild.jpg" alt="Profilbild" />
     <h1>Victor Stommendal</h1>
     <p>Personlig hemsida – GitHub Pages 🚀</p>
   </header>
 
   <nav>
-    <a href="#studier"><i class="fas fa-graduation-cap"></i> Studier</a>
-    <a href="#resor"><i class="fas fa-globe"></i> Resor</a>
-    <a href="#cv"><i class="fas fa-file-alt"></i> CV</a>
-    <a href="#kontakt"><i class="fas fa-envelope"></i> Kontakt</a>
+    <a href="#studier">Studier</a>
+    <a href="#resor">Resor</a>
+    <a href="#cv">CV</a>
+    <a href="#kontakt">Kontakt</a>
   </nav>
 
   <main class="container">
     <div class="card" id="studier">
       <h2>🎓 Studier</h2>
-      <p>Jag studerar [ämne] på [universitet/skola]. Mitt fokus ligger på [ämnen eller projekt].</p>
+      <p>Jag studerar Globala System på Chalmers Tekniska Högskola. Mitt fokus ligger på hållbar utveckling, teknik och samhälle.</p>
+      <div class="logos">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/7/79/Chalmers_logo_white.png" alt="Chalmers logga" />
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Globe_icon.svg/240px-Globe_icon.svg.png" alt="Globala Systems logga" />
+      </div>
     </div>
 
     <div class="card" id="resor">
@@ -176,8 +171,9 @@
       <h2>📄 CV & Personligt brev</h2>
       <p>Ladda ner mina dokument:</p>
       <ul>
-        <li><a href="cv.pdf" target="_blank"><i class="fas fa-file-pdf"></i> CV (PDF)</a></li>
-        <li><a href="personligt-brev.pdf" target="_blank"><i class="fas fa-file-pdf"></i> Personligt brev (PDF)</a></li>
+        <li><a href="cv.pdf" target="_blank">📄 CV (PDF)</a></li>
+        <li><a href="personligt-brev.pdf" target="_blank">📄 Personligt brev (PDF)</a></li>
+        <li><a href="https://www.linkedin.com/in/victor-stommendal-victor-stommendal/" target="_blank">🔗 LinkedIn-profil</a></li>
       </ul>
     </div>
 
@@ -187,7 +183,7 @@
         <input type="text" placeholder="Ditt namn" required />
         <input type="email" placeholder="Din e-post" required />
         <textarea rows="5" placeholder="Ditt meddelande" required></textarea>
-        <button type="submit"><i class="fas fa-paper-plane"></i> Skicka</button>
+        <button type="submit">Skicka</button>
       </form>
       <p style="margin-top: 1rem;">Eller maila mig på <a href="mailto:victor.stommendal@gmail.com">victor.stommendal@gmail.com</a></p>
     </div>
