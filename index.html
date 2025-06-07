@@ -5,35 +5,50 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Victor Stommendal</title>
   <style>
+    :root {
+      --primary: #004aad;
+      --secondary: #f0f4ff;
+      --text: #333;
+    }
+
     * {
+      margin: 0;
+      padding: 0;
       box-sizing: border-box;
+      scroll-behavior: smooth;
     }
 
     body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: #f4f4f4;
-      color: #333;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: var(--secondary);
+      color: var(--text);
     }
 
     header {
-      background-color: #004aad;
+      background: linear-gradient(to right, #004aad, #0066ff);
       color: white;
-      padding: 2rem 1rem;
       text-align: center;
+      padding: 4rem 1rem;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 0.5rem;
     }
 
     nav {
       background-color: #003080;
       display: flex;
-      flex-wrap: wrap;
       justify-content: center;
+      flex-wrap: wrap;
     }
 
     nav a {
       color: white;
       padding: 1rem;
       text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s;
     }
 
     nav a:hover {
@@ -41,61 +56,72 @@
     }
 
     section {
-      padding: 2rem;
-      max-width: 900px;
+      padding: 4rem 2rem;
+      max-width: 1000px;
       margin: auto;
     }
 
-    footer {
-      background-color: #ddd;
-      text-align: center;
-      padding: 1rem;
-      margin-top: 3rem;
+    section h2 {
+      color: var(--primary);
+      margin-bottom: 1rem;
     }
 
-    img.profile {
-      max-width: 150px;
+    ul {
+      list-style: square;
+      margin-left: 2rem;
+    }
+
+    footer {
+      text-align: center;
+      background-color: #ddd;
+      padding: 2rem 1rem;
+      margin-top: 4rem;
+    }
+
+    .profile {
+      width: 150px;
       border-radius: 50%;
-      display: block;
       margin: 1rem auto;
+      display: block;
+      border: 4px solid white;
     }
 
     form {
-      display: flex;
-      flex-direction: column;
+      display: grid;
+      gap: 1rem;
       max-width: 500px;
       margin: auto;
     }
 
-    form input, form textarea {
-      margin-bottom: 1rem;
+    input, textarea {
       padding: 0.8rem;
-      font-size: 1rem;
-      border: 1px solid #ccc;
       border-radius: 5px;
+      border: 1px solid #ccc;
+      font-size: 1rem;
     }
 
-    form button {
-      background-color: #004aad;
-      color: white;
+    button {
       padding: 0.8rem;
+      background-color: var(--primary);
+      color: white;
       border: none;
       border-radius: 5px;
       cursor: pointer;
+      font-weight: bold;
     }
 
-    form button:hover {
+    button:hover {
       background-color: #002f75;
     }
 
     @media (max-width: 600px) {
+      header h1 {
+        font-size: 2rem;
+      }
+
       nav a {
         flex: 1 0 100%;
         text-align: center;
-      }
-
-      section {
-        padding: 1rem;
       }
     }
   </style>
@@ -103,9 +129,9 @@
 <body>
 
   <header>
+    <img src="profilbild.jpg" alt="Profilbild" class="profile" />
     <h1>Victor Stommendal</h1>
     <p>Min personliga hemsida – byggd med GitHub Pages 🚀</p>
-    <img src="profilbild.jpg" alt="Profilbild" class="profile" />
   </header>
 
   <nav>
@@ -117,43 +143,43 @@
   </nav>
 
   <section id="start">
-    <h2>Start</h2>
-    <p>Välkommen till min hemsida! Här kan du läsa om mig, mina studier, resor och se mitt CV.</p>
+    <h2>👋 Välkommen</h2>
+    <p>Hej! Jag heter Victor. Den här sidan är mitt digitala visitkort där jag delar med mig av mina studier, resor och erfarenheter.</p>
   </section>
 
   <section id="studier">
-    <h2>Mina studier</h2>
-    <p>Jag studerar [ämne] vid [skola/universitet]. Mina intressen inkluderar [ämnesområden, projekt eller kurser].</p>
+    <h2>🎓 Mina studier</h2>
+    <p>Jag studerar [ämne] vid [universitet/skola]. Jag brinner för [ämne eller projekt].</p>
   </section>
 
   <section id="resor">
-    <h2>Mina resor</h2>
-    <p>Jag älskar att upptäcka världen. Här är några av mina favoritresmål:</p>
+    <h2>🌍 Mina resor</h2>
+    <p>Några favoritresmål:</p>
     <ul>
-      <li>🇯🇵 Tokyo – teknologi och kultur</li>
-      <li>🇪🇸 Barcelona – sol, strand och arkitektur</li>
-      <li>🇺🇸 San Francisco – tech och natur</li>
+      <li>🇯🇵 Tokyo – Teknik, mat och kultur</li>
+      <li>🇪🇸 Barcelona – Sol, arkitektur och tapas</li>
+      <li>🇺🇸 San Francisco – Innovation och landskap</li>
     </ul>
   </section>
 
   <section id="cv">
-    <h2>CV & Personligt brev</h2>
-    <p>Här kan du ladda ner mina dokument:</p>
+    <h2>📄 CV & Personligt brev</h2>
+    <p>Du kan ladda ner mina dokument här:</p>
     <ul>
-      <li><a href="cv.pdf" target="_blank">📄 Mitt CV</a></li>
-      <li><a href="personligt-brev.pdf" target="_blank">📄 Personligt brev</a></li>
+      <li><a href="cv.pdf" target="_blank">📄 CV (PDF)</a></li>
+      <li><a href="personligt-brev.pdf" target="_blank">📄 Personligt brev (PDF)</a></li>
     </ul>
   </section>
 
   <section id="kontakt">
-    <h2>Kontakt</h2>
+    <h2>📬 Kontakt</h2>
     <form>
       <input type="text" placeholder="Ditt namn" required />
       <input type="email" placeholder="Din e-post" required />
       <textarea rows="5" placeholder="Ditt meddelande" required></textarea>
       <button type="submit">Skicka</button>
     </form>
-    <p style="text-align:center; margin-top: 1rem;">Eller maila mig på <a href="victor.stommendal@gmail.com">exempel@email.com</a></p>
+    <p style="text-align:center; margin-top: 1rem;">Eller skicka e-post till <a href="victor.stommendal@gmail.com">exempel@email.com</a></p>
   </section>
 
   <footer>
