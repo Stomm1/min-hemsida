@@ -16,34 +16,73 @@
       box-sizing: border-box;
       margin: 0;
       padding: 0;
+      scroll-behavior: smooth;
     }
 
     body {
       font-family: 'Segoe UI', sans-serif;
       background-color: var(--bg);
       color: var(--text);
-      padding: 2rem;
       line-height: 1.6;
+    }
+
+    header {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem;
+      padding: 3rem 1rem;
+      background: linear-gradient(to right, #202020, #2a2a2a);
+      flex-wrap: wrap;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      color: var(--accent);
+    }
+
+    .profile-pic {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid white;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: #1a1a1a;
+      padding: 1rem;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: var(--text);
+      margin: 0.5rem;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      transition: background 0.3s;
+    }
+
+    nav a:hover {
+      background-color: #333;
     }
 
     .content {
       max-width: 800px;
-      margin: auto;
+      margin: 2rem auto;
       background-color: var(--card);
       padding: 2rem;
       border-radius: 10px;
       box-shadow: 0 0 15px rgba(0,0,0,0.4);
     }
 
-    h1 {
-      color: var(--accent);
-      margin-bottom: 1rem;
-      text-align: center;
-    }
-
     h2 {
-      margin-top: 2rem;
       color: var(--accent);
+      margin-top: 2rem;
     }
 
     .ref {
@@ -56,23 +95,39 @@
   </style>
 </head>
 <body>
-  <div class="content">
-    <h1>📚 Referenser</h1>
+
+  <header>
+    <h1>Victor Stommendal</h1>
+    <img src="profil.jpg" alt="Profilbild" class="profile-pic" />
+  </header>
+
+  <nav>
+    <a href="index.html">Hem</a>
+    <a href="studier.html">Studier</a>
+    <a href="resor.html">Resor</a>
+    <a href="referenser.html">Referenser</a>
+    <a href="index.html#cv">CV</a>
+    <a href="index.html#kontakt">Kontakt</a>
+  </nav>
+
+  <main class="content">
+    <h2>📚 Referenser</h2>
     <p>Här hittar du ett urval av professionella referenser jag gärna delar med mig av. Kontakta mig gärna om du önskar ytterligare information.</p>
 
     <div class="ref">
-      <h2>👤 Anna Andersson</h2>
+      <h3>👤 Anna Andersson</h3>
       <p>Tidigare handledare på Chalmers</p>
       <p>📧 <a href="mailto:anna.andersson@example.com">anna.andersson@example.com</a></p>
       <p>📞 +46 70 123 45 67</p>
     </div>
 
     <div class="ref">
-      <h2>👤 Lars Larsson</h2>
+      <h3>👤 Lars Larsson</h3>
       <p>Projektledare vid tidigare sommarjobb</p>
       <p>📧 <a href="mailto:lars.larsson@example.com">lars.larsson@example.com</a></p>
       <p>📞 +46 73 987 65 43</p>
     </div>
-  </div>
+  </main>
+
 </body>
 </html>
