@@ -4,31 +4,75 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Referenser – Victor Stommendal</title>
-  <link rel="stylesheet" href="style.css" />
+  <style>
+    :root {
+      --bg: #121212;
+      --card: #1e1e1e;
+      --text: #ffffff;
+      --accent: #4f8cff;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      padding: 2rem;
+      line-height: 1.6;
+    }
+
+    .content {
+      max-width: 800px;
+      margin: auto;
+      background-color: var(--card);
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.4);
+    }
+
+    h1 {
+      color: var(--accent);
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+
+    h2 {
+      margin-top: 2rem;
+      color: var(--accent);
+    }
+
+    .ref {
+      margin-top: 1rem;
+    }
+
+    a {
+      color: var(--accent);
+    }
+  </style>
 </head>
 <body>
+  <div class="content">
+    <h1>📚 Referenser</h1>
+    <p>Här hittar du ett urval av professionella referenser jag gärna delar med mig av. Kontakta mig gärna om du önskar ytterligare information.</p>
 
-  <header>
-    <h1>Referenser</h1>
-  </header>
-
-  <main class="container">
-    <div class="card">
-      <h2>📢 Vad andra säger</h2>
-      <p><strong>Anna Lindberg, tidigare kollega:</strong><br>
-        "Victor är en engagerad och noggrann person som alltid levererar sitt bästa. Han är både tekniskt kunnig och en glädjespridare i teamet."</p>
-
-      <p><strong>Johan Eriksson, projektledare:</strong><br>
-        "Victor tog stort ansvar i projektet och hans analytiska förmåga hjälpte oss ta rätt beslut vid kritiska tillfällen."</p>
-
-      <p><strong>Lena Gustafsson, handledare:</strong><br>
-        "Jag kan varmt rekommendera Victor. Han har en stark arbetsmoral och är alltid väl förberedd."</p>
+    <div class="ref">
+      <h2>👤 Anna Andersson</h2>
+      <p>Tidigare handledare på Chalmers</p>
+      <p>📧 <a href="mailto:anna.andersson@example.com">anna.andersson@example.com</a></p>
+      <p>📞 +46 70 123 45 67</p>
     </div>
-  </main>
 
-  <footer>
-    <p>© 2025 Victor Stommendal – Alla rättigheter förbehållna</p>
-  </footer>
-
+    <div class="ref">
+      <h2>👤 Lars Larsson</h2>
+      <p>Projektledare vid tidigare sommarjobb</p>
+      <p>📧 <a href="mailto:lars.larsson@example.com">lars.larsson@example.com</a></p>
+      <p>📞 +46 73 987 65 43</p>
+    </div>
+  </div>
 </body>
 </html>
