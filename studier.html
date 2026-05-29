@@ -5,18 +5,99 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Studier – Victor Stommendal</title>
   <link rel="stylesheet" href="style.css" />
+
   <style>
-    body { background-color: #121212; color: white; font-family: 'Segoe UI', sans-serif; margin: 0; padding: 0; }
-    header, nav, footer { background-color: #1a1a1a; padding: 1rem; text-align: center; }
-    nav a { color: #ffffff; text-decoration: none; margin: 0 1rem; font-weight: bold; }
-    nav a:hover { color: #4f8cff; }
-    .container { max-width: 800px; margin: 2rem auto; padding: 1rem; background-color: #1e1e1e; border-radius: 10px; box-shadow: 0 0 15px rgba(0, 0, 0, 0.4); }
-    h1, h2 { color: #4f8cff; }
-    ul { margin-top: 1rem; padding-left: 1.5rem; }
-    li { margin-bottom: 0.5rem; }
-    a { color: #4f8cff; }
+    body {
+      background-color: #121212;
+      color: white;
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header, nav, footer {
+      background-color: #1a1a1a;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    nav a {
+      color: #ffffff;
+      text-decoration: none;
+      margin: 0 1rem;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: #4f8cff;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 2rem;
+      background-color: #1e1e1e;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+    }
+
+    h1, h2 {
+      color: #4f8cff;
+    }
+
+    ul {
+      margin-top: 1rem;
+      padding-left: 1.5rem;
+    }
+
+    li {
+      margin-bottom: 0.5rem;
+    }
+
+    a {
+      color: #4f8cff;
+    }
+
+    .top-section {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+
+    .text-section {
+      flex: 1;
+      min-width: 250px;
+    }
+
+    .logo-container {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      align-items: center;
+    }
+
+    .logo {
+      width: 140px;
+      background: white;
+      padding: 10px;
+      border-radius: 10px;
+    }
+
+    @media (max-width: 700px) {
+      .top-section {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .logo-container {
+        flex-direction: row;
+      }
+    }
   </style>
 </head>
+
 <body>
 
   <header>
@@ -30,18 +111,36 @@
   </nav>
 
   <main class="container">
-    <h2>🎓 Kurser jag har läst</h2>
-    <p>Här är ett urval av kurser jag läst vid Chalmers inom Globala System:</p>
-    <ul>
-      <li>Introduktion till Globala System
-      <li>Berälningsverktyg</li>
-      <li>Envariabelsanalys</li>
-      <li>Linjär Algebra</li>
-      <li>Evolution och självorganisation i biologiska system</li>
-      <li>Mekanik</li>
-      <li>Jorden som system</li>
-      <li>Ordning och oordning i fysikaliska system</li>
-    </ul>
+
+    <div class="top-section">
+
+      <div class="text-section">
+        <h2>🎓 Kurser jag har läst</h2>
+
+        <p>
+          Här är ett urval av kurser jag läst vid Chalmers inom Globala System:
+        </p>
+
+        <ul>
+          <li>Introduktion till Globala System</li>
+          <li>Beräkningsverktyg</li>
+          <li>Envariabelsanalys</li>
+          <li>Linjär Algebra</li>
+          <li>Evolution och självorganisation i biologiska system</li>
+          <li>Mekanik</li>
+          <li>Jorden som system</li>
+          <li>Ordning och oordning i fysikaliska system</li>
+        </ul>
+      </div>
+
+      <div class="logo-container">
+        <img src="chalmers.png" alt="Chalmers logga" class="logo">
+
+        <img src="globala-system.png" alt="Globala System logga" class="logo">
+      </div>
+
+    </div>
+
   </main>
 
   <footer>
