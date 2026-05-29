@@ -14,24 +14,26 @@
       margin: 0;
       padding: 0;
     }
-
-    header, nav, footer {
+  
+    header,
+    nav,
+    footer {
       background-color: #1a1a1a;
       padding: 1rem;
       text-align: center;
     }
-
+  
     nav a {
       color: #ffffff;
       text-decoration: none;
       margin: 0 1rem;
       font-weight: bold;
     }
-
+  
     nav a:hover {
       color: #4f8cff;
     }
-
+  
     .container {
       max-width: 900px;
       margin: 2rem auto;
@@ -40,24 +42,25 @@
       border-radius: 10px;
       box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
     }
-
-    h1, h2 {
+  
+    h1,
+    h2 {
       color: #4f8cff;
     }
-
+  
     ul {
       margin-top: 1rem;
       padding-left: 1.5rem;
     }
-
+  
     li {
       margin-bottom: 0.5rem;
     }
-
+  
     a {
       color: #4f8cff;
     }
-
+  
     .top-section {
       display: flex;
       justify-content: space-between;
@@ -65,32 +68,60 @@
       gap: 30px;
       flex-wrap: wrap;
     }
-
+  
     .text-section {
       flex: 1;
       min-width: 250px;
     }
-
+  
     .logo-container {
       display: flex;
       flex-direction: column;
       gap: 20px;
       align-items: center;
     }
-
+  
     .logo {
       width: 140px;
       background: white;
       padding: 10px;
       border-radius: 10px;
     }
-
+  
+    .course-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+      margin-bottom: 40px;
+      font-size: 0.95rem;
+    }
+  
+    .course-table th,
+    .course-table td {
+      border: 1px solid #444;
+      padding: 10px;
+      text-align: left;
+    }
+  
+    .course-table th {
+      background-color: #4f8cff;
+      color: white;
+    }
+  
+    .course-table tr:nth-child(even) {
+      background-color: #2a2a2a;
+    }
+  
+    .course-table tr:hover {
+      background-color: #333;
+    }
+  
     @media (max-width: 700px) {
       .top-section {
         flex-direction: column;
         align-items: center;
       }
-
+  
       .logo-container {
         flex-direction: row;
       }
@@ -113,48 +144,73 @@
   <main class="container">
 
     <div class="top-section">
-
+  
       <div class="text-section">
-        <h2>🎓 Kurser jag har läst</h2>
-
+  
+        <h2>🎓 Studier vid Chalmers – Globala System</h2>
+  
         <p>
-          Här är ett urval av kurser jag läst vid Chalmers inom Globala System:
+          Nedan visas ett urval av kurser och resultat från mina studier inom civilingenjörsprogrammet Globala System vid Chalmers.
         </p>
-
-        <ul>
-          <li>Introduktion till Globala System</li>
-          <li>Beräkningsverktyg</li>
-          <li>Envariabelsanalys</li>
-          <li>Linjär Algebra</li>
-          <li>Evolution och självorganisation i biologiska system</li>
-          <li>Mekanik</li>
-          <li>Jorden som system</li>
-          <li>Ordning och oordning i fysikaliska system</li>
-          <li>Klimatmodellering</li>
-          <li>Matematisk modellering och problemlösning</li>
-          <li>Grundläggande programutveckling</li>
-          <li>Socio-tekniska system</li>
-          <li>Flervariabelanalys</li>
-          <li>Statistik och sannolikhetslära</li>
-          <li>Elektromagnetiska fält och vågor</li>
-          <li>Indtrodution to data science and AI</li>
-          <li>Samhället som system</li>
-        </ul>
+  
+        <h2>Årskurs 1</h2>
+  
+        <table class="course-table">
+          <tr>
+            <th>Kurs</th>
+            <th>Kurskod</th>
+            <th>Pass rate</th>
+            <th>Snittbetyg</th>
+            <th>Poäng</th>
+            <th>Betyg</th>
+          </tr>
+  
+          <tr><td>Beräkningsverktyg</td><td>MVE626</td><td>100%</td><td>3,35</td><td>-</td><td>3</td></tr>
+          <tr><td>Envariabelanalys</td><td>MVE620</td><td>78,6%</td><td>3,81</td><td>31/50</td><td>4</td></tr>
+          <tr><td>Evolution och självorganisation i biologiska system</td><td>SEE075</td><td>95,4%</td><td>4,1</td><td>23/30</td><td>4</td></tr>
+          <tr><td>Globala system individuell inlämning</td><td>SEE070</td><td>-</td><td>-</td><td>-</td><td>Mycket beröm G</td></tr>
+          <tr><td>Globala system slutrapport</td><td>SEE070</td><td>96,4%</td><td>-</td><td>-</td><td>G</td></tr>
+          <tr><td>Jorden som system</td><td>SEE060</td><td>92,3%</td><td>3,78</td><td>27,5/50</td><td>3</td></tr>
+          <tr><td>Linjär algebra</td><td>SEE086</td><td>75,6%</td><td>3,66</td><td>25/50</td><td>4</td></tr>
+          <tr><td>Linjär algebra projektarbete</td><td>SEE086</td><td>-</td><td>-</td><td>-</td><td>G</td></tr>
+          <tr><td>Mekanik 1</td><td>SEE081</td><td>79,4%</td><td>3,78</td><td>16,5/30</td><td>3</td></tr>
+          <tr><td>Munta evolution och självorganisation</td><td>SEE075</td><td>-</td><td>-</td><td>12/18</td><td>12/18 p</td></tr>
+          <tr><td>Ordning och oordning i fysikaliska system</td><td>SEE065</td><td>90,5%</td><td>4,35</td><td>42/50</td><td>5</td></tr>
+          <tr><td>Projektpresentation evolution och självorganisation</td><td>SEE075</td><td>-</td><td>-</td><td>11/12</td><td>11/12 p</td></tr>
+          <tr><td>Tillämpat matematiskt tänkande (TMT)</td><td>DAT435</td><td>99,1%</td><td>4,19</td><td>-</td><td>4</td></tr>
+        </table>
+  
+        <h2>Årskurs 2</h2>
+  
+        <table class="course-table">
+          <tr>
+            <th>Kurs</th>
+            <th>Kurskod</th>
+            <th>Pass rate</th>
+            <th>Snittbetyg</th>
+            <th>Poäng</th>
+            <th>Betyg</th>
+          </tr>
+  
+          <tr><td>Klimatmodellering</td><td>SEE110</td><td>100%</td><td>-</td><td>-</td><td>G</td></tr>
+          <tr><td>Matematisk modellering och problemlösning</td><td>DAT605</td><td>100%</td><td>-</td><td>-</td><td>G</td></tr>
+          <tr><td>Grundläggande programutveckling</td><td>DAT506</td><td>69%</td><td>4,59</td><td>42/60</td><td>4</td></tr>
+          <tr><td>Socio-tekniska system</td><td>TEK820</td><td>98,7%</td><td>4,53</td><td>124/150</td><td>4</td></tr>
+          <tr><td>Flervariabelanalys</td><td>MVE655</td><td>29%</td><td>3,38</td><td>20,5/50</td><td>3</td></tr>
+          <tr><td>Statistik och sannolikhetslära</td><td>MVE650</td><td>58%</td><td>3,68</td><td>19/30</td><td>4</td></tr>
+          <tr><td>Elektromagnetiska fält och vågor</td><td>SEE105</td><td>50%</td><td>3,31</td><td>29/60</td><td>3</td></tr>
+          <tr><td>Introduction to data science and AI</td><td>DAT566</td><td>84,4%</td><td>-</td><td>-</td><td>-</td></tr>
+          <tr><td>Samhället som system</td><td>TEK915</td><td>91,3%</td><td>3,99</td><td>-</td><td>-</td></tr>
+        </table>
+  
       </div>
-
+  
       <div class="logo-container">
         <img src="chalmers.png" alt="Chalmers logga" class="logo">
-
-        <img src="globala-systems.png" alt="Globala System logga" class="logo">
+  
+        <img src="globala-system.png" alt="Globala System logga" class="logo">
       </div>
-
+  
     </div>
-
+  
   </main>
-
-  <footer>
-    <p>© 2025 Victor Stommendal – Alla rättigheter förbehållna</p>
-  </footer>
-
-</body>
-</html>
