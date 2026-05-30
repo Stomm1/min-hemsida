@@ -1,5 +1,4 @@
-* Lägga till projekt jag är stolt över på studier sidan?
-* Ändra bakgrund från svart?
-* Lägga till GS pitch dokumentet under studier?
+* Lägga till projekt jag är stolt över på studier sidan? 
+som undersida till kursnamn som är klickbara
 * Skriva in mina nya referenser (Gilles, Rikard Avellan?, ...)
 * Fixa TSF hemsidan
