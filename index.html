@@ -37,15 +37,23 @@
     }
 
     header h1 {
-      font-size: 2.5rem;
+      font-size: 3.5rem;
       color: var(--accent);
+    }
+
+    .header-subtitle {
+      width: 100%;
+      text-align: center;
+      margin-top: -0.5rem;
+      font-size: 1.2rem;
+      color: #cccccc;
     }
 
     .profile-pic {
       width: 110px;
       height: 110px;
       border-radius: 50%;
-      object-fit: fill;
+      object-fit: cover;
       border: 2px solid white;
     }
 
@@ -85,6 +93,11 @@
       padding: 2rem;
       border-radius: 10px;
       box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+      transition: transform 0,2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-3px);
     }
 
     .card h2 {
@@ -182,6 +195,10 @@
   <header>
     <h1>Victor Stommendal</h1>
     <img src="Bilder/profilbild.jpg" alt="Profilbild" class="profile-pic" />
+  
+    <div class="header-subtitle">
+      Civilingenjörsstudent på Chalmers • Globala System
+    </div>
   </header>
 
   <nav>
@@ -239,7 +256,7 @@
 
     <div class="card" id="referenser">
       <h2>📢 Referenser</h2>
-      <p>Läs vad andra säger om mig. Se <a href="referenser.html">referenser här</a>.</p>
+      <p>Rekommendationsbrev, tjänstgöringsintyg och professionella referenser. <a href="referenser.html">referenser här</a>.</p>
     </div>
 
     <div class="card" id="kontakt">
