@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Projekt – Victor Stommendal</title>
+
+  <style>
+    :root {
+      --bg: #121212;
+      --card: #1e1e1e;
+      --text: #ffffff;
+      --accent: #4f8cff;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: "Segoe UI", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    header {
+      text-align: center;
+      padding: 3rem 1rem;
+      background: linear-gradient(to right, #202020, #2a2a2a);
+    }
+
+    header h1 {
+      color: var(--accent);
+      font-size: 2.8rem;
+    }
+
+    header p {
+      color: #ccc;
+      margin-top: 0.5rem;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: #1a1a1a;
+      padding: 1rem;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: var(--text);
+      margin: 0.5rem 1rem;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: var(--accent);
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 2rem;
+    }
+
+    .project {
+      background: var(--card);
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+      border-radius: 10px;
+      border: 1px solid #2a2a2a;
+      transition: transform 0.2s ease;
+    }
+
+    .project:hover {
+      transform: translateY(-3px);
+    }
+
+    .project h2 {
+      color: var(--accent);
+      margin-bottom: 0.5rem;
+    }
+
+    .meta {
+      color: #aaa;
+      font-size: 0.9rem;
+      margin-bottom: 1rem;
+    }
+
+    .tags {
+      margin-top: 1rem;
+      font-size: 0.85rem;
+      color: #bbb;
+    }
+
+    .button {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.6rem 1rem;
+      background: var(--accent);
+      color: white;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .button:hover {
+      background: #3c7ce6;
+    }
+
+    .section-title {
+      margin: 2rem 0 1rem;
+      color: var(--accent);
+      font-size: 1.3rem;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>🛠️ Projekt</h1>
+  <p>Dataanalys, systemmodellering och programmering</p>
+</header>
+
+<nav>
+    <a href="index.html">Hem</a>
+    <a href="studier.html">Studier</a>
+    <a href="projekt.html">Projekt</a>
+    <a href="resor.html">Resor</a>
+    <a href="referenser.html">Referenser</a>
+    <a href="index.html#CV">CV & LinkedIn</a>
+    <a href="index.html#kontakt">Kontakt</a>
+  </nav>
+
+<div class="container">
+
+  <div class="section-title">📊 Data & Analys</div>
+
+  <div class="project">
+    <h2>Dataanalys av systemflöden</h2>
+    <div class="meta">Python • Excel • Statistik</div>
+
+    <p>
+      Analys av ett komplext system med fokus på att identifiera ineffektivitet, flaskhalsar och förbättringsområden.
+    </p>
+
+    <div class="tags">
+      Resultat: förbättrad förståelse av systemets struktur och kritiska punkter.
+    </div>
+
+    <a class="button" href="Dokument/rapport1.pdf" target="_blank">📄 Se rapport</a>
+  </div>
+
+  <div class="project">
+    <h2>Data visualisering</h2>
+    <div class="meta">Python • Matplotlib</div>
+
+    <p>
+      Visualisering av dataset för att göra komplex information mer tydlig och användbar för analys.
+    </p>
+  </div>
+
+  <div class="section-title">⚙️ System & Modellering</div>
+
+  <div class="project">
+    <h2>Systemmodellering</h2>
+    <div class="meta">MATLAB • Dynamiska system</div>
+
+    <p>
+      Modellering och simulering av dynamiska system för att analysera beteenden över tid.
+    </p>
+
+    <div class="tags">
+      Fokus: systemdynamik, matematiska modeller, simulering
+    </div>
+  </div>
+
+  <div class="project">
+    <h2>Webbprojekt (Portfolio)</h2>
+    <div class="meta">HTML • CSS</div>
+
+    <p>
+      Personlig portfolio byggd från grunden för att presentera projekt, studier och erfarenheter.
+    </p>
+
+    <div class="tags">
+      Fokus: frontend, design, struktur
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>
+

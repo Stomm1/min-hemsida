@@ -2,3 +2,19 @@
 som undersida till kursnamn som är klickbara
 * Skriva in mina nya referenser (Gilles, Rikard Avellan?, ...)
 * Fixa TSF hemsidan
+
+🧭 Rekommendation (prioritering)
+
+Gör i denna ordning:
+
+1. Projekt per kurs (STÖRST effekt)
+
+👉 detta ger mest “wow”
+
+2. Riktiga referenser
+
+👉 bygger trovärdighet
+
+3. Eventuellt små UI-förbättringar
+
+👉 kosmetiskt, inte viktigt längre
