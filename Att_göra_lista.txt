@@ -1,6 +1,7 @@
 * Lägga till projekt jag är stolt över på studier sidan? 
 som undersida till kursnamn som är klickbara
 * Skriva in mina nya referenser (Gilles, Rikard Avellan?, ...)
+* Göra så att projekt grejen på stsartsidan blir kortare eller flytta till högerspalten ensam?
 * Fixa TSF hemsidan
 
 🧭 Rekommendation (prioritering)
