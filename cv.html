@@ -1,121 +1,290 @@
-<style>
-    :root{
-      --bg:#121212;
-      --card:#1e1e1e;
-      --text:#ffffff;
-      --muted:#bdbdbd;
-      --accent:#4f8cff;
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
     }
-    
-    body{
-      margin:0;
-      font-family:"Segoe UI", sans-serif;
-      background:var(--bg);
-      color:var(--text);
+
+    body {
+      background: #0b1020;
+      color: white;
+      line-height: 1.6;
     }
-    
-    /* TIMELINE WRAPPER */
-    .timeline{
-      max-width:900px;
-      margin:4rem auto;
-      padding:0 1rem;
-      position:relative;
+
+    /* NAVBAR */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 60px;
+      position: sticky;
+      top: 0;
+      background: rgba(10, 15, 30, 0.8);
+      backdrop-filter: blur(10px);
     }
-    
-    /* vertical line */
-    .timeline::before{
-      content:"";
-      position:absolute;
-      left:20px;
-      top:0;
-      bottom:0;
-      width:2px;
-      background:#2a2a2a;
+
+    .logo {
+      font-weight: bold;
+      font-size: 18px;
     }
-    
-    /* ITEM */
-    .item{
-      position:relative;
-      padding-left:60px;
-      margin-bottom:2.5rem;
+
+    nav a {
+      margin: 0 12px;
+      color: #ccc;
+      text-decoration: none;
+      font-size: 14px;
     }
-    
-    /* DOT */
-    .item::before{
-      content:"";
-      position:absolute;
-      left:12px;
-      top:6px;
-      width:16px;
-      height:16px;
-      background:var(--accent);
-      border-radius:50%;
-      box-shadow:0 0 0 4px rgba(79,140,255,0.15);
+
+    nav a:hover {
+      color: white;
     }
-    
-    /* CARD */
-    .card{
-      background:var(--card);
-      padding:1.5rem;
-      border-radius:12px;
-      border:1px solid #2a2a2a;
-      transition:transform .2s ease, box-shadow .2s ease;
+
+    /* HERO */
+    .hero {
+      text-align: center;
+      padding: 100px 20px;
+      background: radial-gradient(circle at top, #1b2a4a, #0b1020);
     }
-    
-    .card:hover{
-      transform:translateY(-3px);
-      box-shadow:0 10px 25px rgba(0,0,0,0.4);
+
+    .hero h1 {
+      font-size: 48px;
+      margin-bottom: 10px;
     }
-    
-    /* TEXT */
-    .title{
-      font-size:1.2rem;
-      font-weight:700;
-      color:var(--accent);
+
+    .hero p {
+      color: #aaa;
+      margin-bottom: 20px;
     }
-    
-    .meta{
-      font-size:0.9rem;
-      color:var(--muted);
-      margin:0.3rem 0 1rem 0;
+
+    .buttons button {
+      padding: 10px 18px;
+      margin: 5px;
+      border: none;
+      border-radius: 20px;
+      cursor: pointer;
     }
-    
-    .desc{
-      color:#ddd;
-      line-height:1.5;
+
+    .primary {
+      background: #4f8cff;
+      color: white;
     }
-    </style>
-    
-    <div class="timeline">
-    
-      <div class="item">
-        <div class="card">
-          <div class="title">GKN Aerospace Sweden AB</div>
-          <div class="meta">Ingenjörspraktikant • 2025 • Trollhättan</div>
-          <div class="desc">
-            Patentsökningar i Patsnap, analys av teknologitrender och utveckling av Power BI-dashboard för visualisering av IP-data och innovationsmönster.
-          </div>
-        </div>
-      </div>
-    
-      <div class="item">
-        <div class="card">
-          <div class="title">Volvo Group Trucks Technology</div>
-          <div class="meta">Tekniksprånget & Sommarjobb • 2024 • Göteborg</div>
-          <div class="desc">
-            Arbete inom systemarkitektur med fokus på ECU-arkitektur i tunga fordon och förståelse för komplexa distribuerade system.
-          </div>
-        </div>
-      </div>
-    
-      <div class="item">
-        <div class="card">
-          <div class="title">Chalmers tekniska högskola</div>
-          <div class="meta">Civilingenjör • Globala System • 2024–nu • Göteborg</div>
-          <div class="desc">
-            Systemtänkande, modellering, programmering och dataanalys med fokus på hållbara och samhällskritiska system.
-          </div>
-        </div>
-      </div>
-    
+
+    .secondary {
+      background: #222a3d;
+      color: white;
+    }
+
+    /* STATS */
+    .stats {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 40px;
+      flex-wrap: wrap;
+    }
+
+    .card {
+      background: #141b2d;
+      padding: 20px;
+      border-radius: 12px;
+      min-width: 120px;
+      text-align: center;
+    }
+
+    /* SECTIONS */
+    section {
+      padding: 80px 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 40px;
+      font-size: 32px;
+    }
+
+    /* ABOUT */
+    .about {
+      display: flex;
+      gap: 40px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .about img {
+      width: 200px;
+      border-radius: 50%;
+    }
+
+    .about-text {
+      flex: 1;
+      color: #bbb;
+    }
+
+    /* SKILLS */
+    .skills {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    .skill {
+      background: #141b2d;
+      padding: 20px;
+      border-radius: 12px;
+    }
+
+    /* TIMELINE */
+    .timeline {
+      border-left: 3px solid #4f8cff;
+      padding-left: 20px;
+    }
+
+    .item {
+      margin-bottom: 30px;
+    }
+
+    .item h3 {
+      margin-bottom: 5px;
+    }
+
+    .item span {
+      font-size: 12px;
+      color: #888;
+    }
+
+    /* CONTACT */
+    .contact {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border-radius: 8px;
+      border: none;
+      background: #141b2d;
+      color: white;
+    }
+
+    button.send {
+      background: #4f8cff;
+      color: white;
+      padding: 10px;
+      border: none;
+      width: 100%;
+      border-radius: 8px;
+    }
+
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .contact {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">Titan Folio</div>
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Skills</a>
+    <a href="#">Journey</a>
+    <a href="#">Contact</a>
+  </nav>
+</header>
+
+<!-- HERO -->
+<div class="hero">
+  <h1>Titan Folio</h1>
+  <p>Creative Developer & Designer</p>
+
+  <div class="buttons">
+    <button class="primary">View My Work</button>
+    <button class="secondary">Let’s Talk</button>
+  </div>
+
+  <div class="stats">
+    <div class="card">100+<br>Projects</div>
+    <div class="card">5+<br>Years</div>
+    <div class="card">50+<br>Clients</div>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section>
+  <h2>About Me</h2>
+  <div class="about">
+    <img src="https://via.placeholder.com/200" alt="profile"/>
+    <div class="about-text">
+      <p>
+        I’m a passionate developer with experience in building modern web applications.
+        I love UI/UX design, clean code, and creating smooth user experiences.
+      </p>
     </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section>
+  <h2>Skills</h2>
+  <div class="skills">
+    <div class="skill">Frontend Development</div>
+    <div class="skill">Backend Systems</div>
+    <div class="skill">UI/UX Design</div>
+    <div class="skill">Performance Optimization</div>
+  </div>
+</section>
+
+<!-- TIMELINE -->
+<section>
+  <h2>My Journey</h2>
+  <div class="timeline">
+    <div class="item">
+      <h3>Computer Science Degree</h3>
+      <span>2018 - 2022</span>
+      <p>Studied software engineering and algorithms.</p>
+    </div>
+
+    <div class="item">
+      <h3>Frontend Developer</h3>
+      <span>2022 - 2023</span>
+      <p>Worked on responsive web applications.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section>
+  <h2>Contact</h2>
+  <div class="contact">
+    <div>
+      <p>Let’s work together on your next project.</p>
+      <p>Email: hello@example.com</p>
+    </div>
+
+    <div>
+      <input type="text" placeholder="Your Name"/>
+      <input type="email" placeholder="Your Email"/>
+      <textarea rows="4" placeholder="Message"></textarea>
+      <button class="send">Send Message</button>
+    </div>
+  </div>
+</section>
+
+</body>
+</html>
