@@ -1,3 +1,8 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Victor Stommendal – CV</title>
 
   <style>
@@ -87,13 +92,7 @@
       color: white;
     }
 
-    .linkedin-icon {
-      width: 18px;
-      height: 18px;
-      fill: #0a66c2;
-    }
-
-    /* CONTACT CARD */
+    /* CONTACT */
     .contact-card {
       margin: 20px auto 0;
       max-width: 420px;
@@ -106,7 +105,6 @@
 
     .contact-card h3 {
       margin-bottom: 10px;
-      color: #fff;
     }
 
     .contact-card p {
@@ -117,23 +115,6 @@
     .contact-card a {
       color: #8fb7ff;
       text-decoration: none;
-    }
-
-    /* STATS */
-    .stats {
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      margin-top: 35px;
-      flex-wrap: wrap;
-    }
-
-    .card {
-      background: #141b2d;
-      padding: 18px;
-      border-radius: 12px;
-      min-width: 160px;
-      text-align: center;
     }
 
     section {
@@ -166,7 +147,6 @@
       color: #bbb;
     }
 
-    /* EXTRA BUTTONS UNDER ABOUT */
     .mini-buttons {
       margin-top: 20px;
       display: flex;
@@ -187,7 +167,7 @@
       border-radius: 12px;
     }
 
-    /* TIMELINE */
+    /* TIMELINE BASE */
     .timeline {
       position: relative;
       max-width: 900px;
@@ -202,7 +182,6 @@
       top: 0;
       bottom: 0;
       width: 3px;
-      background: #4f8cff;
       transform: translateX(-50%);
     }
 
@@ -228,7 +207,6 @@
       top: 25px;
       width: 14px;
       height: 14px;
-      background: #4f8cff;
       border-radius: 50%;
     }
 
@@ -254,6 +232,26 @@
       margin-top: 8px;
     }
 
+    /* 💼 ERFARENHET (BLÅ) */
+    .timeline.experience::before {
+      background: #4f8cff;
+    }
+
+    .timeline.experience .item::before {
+      background: #4f8cff;
+      box-shadow: 0 0 0 4px rgba(79,140,255,0.15);
+    }
+
+    /* 🎓 UTBILDNING (GUL) */
+    .timeline.education::before {
+      background: #f5c542;
+    }
+
+    .timeline.education .item::before {
+      background: #f5c542;
+      box-shadow: 0 0 0 4px rgba(245,197,66,0.15);
+    }
+
     @media (max-width: 768px) {
       .timeline::before {
         left: 20px;
@@ -268,7 +266,6 @@
 
       .item::before {
         left: 12px !important;
-        right: auto !important;
       }
     }
   </style>
@@ -279,7 +276,6 @@
 <header>
   <div class="logo">Victor Stommendal</div>
   <nav>
-    <a href="index.html">Hem</a>
     <a href="#about">Om mig</a>
     <a href="#skills">Kompetenser</a>
     <a href="#journey">Erfarenhet</a>
@@ -293,21 +289,17 @@
   <h1>Victor Stommendal</h1>
   <p>Civilingenjörsstudent • Systemanalys • Data & Engineering</p>
 
-  <!-- PDF + LinkedIn KNAPPAR (TOPPEN) -->
   <div class="action-buttons">
-
-    <a class="pdf-button" href="Dokument/CV-Svenska.pdf" target="_blank">📄 Ladda ner CV pdf (SV)</a>
-    <a class="pdf-button" href="Dokument/CV-English.pdf" target="_blank">📄 Download CV pdf (EN)</a>
-
+    <a class="pdf-button" href="Dokument/CV-Svenska.pdf">📄 CV (SV)</a>
+    <a class="pdf-button" href="Dokument/CV-English.pdf">📄 CV (EN)</a>
   </div>
 
-  <!-- KONTAKT (TOPPEN I HERO) -->
   <div class="contact-card">
     <h3>Kontakt</h3>
     <p>Victor Stommendal</p>
     <p>📧 <a href="mailto:victor.stommendal@gmail.com">victor.stommendal@gmail.com</a></p>
     <p>📞 +46 73 395 33 44</p>
-    <p>📍 Nordanvindsvägen 10, 46159, Trollhättan, Sverige</p>
+    <p>📍 Trollhättan, Sverige</p>
   </div>
 
 </div>
@@ -322,20 +314,12 @@
     <div class="about-text">
       <p>
         Civilingenjörsstudent på Chalmers med fokus på systemanalys, data och tekniska system.
-        Erfarenhet från GKN Aerospace och Volvo Group inom ingenjörsarbete och datadrivna projekt.
+        Erfarenhet från industriella ingenjörsprojekt och datadrivna analyser.
       </p>
 
-      <!-- PERSONLIGT BREV HÄR -->
       <div class="mini-buttons">
-
-        <a class="pdf-button" href="Dokument/personligt-brev-svenska.pdf" target="_blank">
-          ✉️ Personligt brev (SV)
-        </a>
-
-        <a class="pdf-button" href="Dokument/personligt-brev-english.pdf" target="_blank">
-          ✉️ Cover Letter (EN)
-        </a>
-
+        <a class="pdf-button" href="Dokument/personligt-brev-svenska.pdf">✉️ Brev SV</a>
+        <a class="pdf-button" href="Dokument/personligt-brev-english.pdf">✉️ Cover EN</a>
       </div>
     </div>
   </div>
@@ -353,50 +337,37 @@
   </div>
 </section>
 
-<!-- TIMELINE -->
+<!-- EXPERIENCE -->
 <section id="journey">
-    <h2>Arbetslivserfarenhet</h2>
-    <div class="timeline">
-      <div class="item">
-        <h3>GKN Aerospace Sweden AB</h3>
-        <span>2025 • Ingenjörspraktikant</span>
-        <p>
-          Patentsökningar i Patsnap, analys av teknologitrender och utveckling av Power BI-rapport för IP-data.
-        </p>
-      </div>
-      
-      <div class="item">
-        <h3>Volvo Group Trucks Technology</h3>
-        <span>2024 • Tekniksprånget / Sommarjobb</span>
-        <p>
-          Arbete inom systemarkitektur och ECU-förståelse i tunga fordon samt tekniska analyser i utvecklingsmiljö.
-        </p>
-      </div>
-    </div>
-  
-  </section>
-  
-  <!-- UTBILDNING -->
-  <section id="education">
-    <h2>Utbildning</h2>
-    <div class="timeline">
-      <div class="item">
-        <h3>Chalmers tekniska högskola</h3>
-        <span>2024 – nu • Civilingenjör</span>
-        <p>
-          Globala system med fokus på systemanalys, modellering, dataanalys och tekniska helhetssystem.
-        </p>
-      </div>
+  <h2>Arbetslivserfarenhet</h2>
 
-      <div class="item">
-        <h3>Gymnasieutbildning</h3>
-        <span>(lägg in din skola här)</span>
-        <p>
-          Teknisk eller naturvetenskaplig inriktning med fokus på matematik och teknik.
-        </p>
-      </div>
+  <div class="timeline experience">
+    <div class="item">
+      <h3>GKN Aerospace</h3>
+      <span>2025 • Praktikant</span>
+      <p>Patentanalys och Power BI-visualisering av teknologidata.</p>
     </div>
-  </section>
+
+    <div class="item">
+      <h3>Volvo Group</h3>
+      <span>2024 • Sommarjobb</span>
+      <p>ECU-arkitektur och systemförståelse inom fordonsindustrin.</p>
+    </div>
+  </div>
+</section>
+
+<!-- EDUCATION -->
+<section id="education">
+  <h2>Utbildning</h2>
+
+  <div class="timeline education">
+    <div class="item">
+      <h3>Chalmers tekniska högskola</h3>
+      <span>2024–nu</span>
+      <p>Civilingenjör i Globala System med fokus på systemanalys och data science.</p>
+    </div>
+  </div>
+</section>
 
 </body>
 </html>
