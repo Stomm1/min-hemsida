@@ -7,130 +7,196 @@
   <link rel="stylesheet" href="style.css" />
 
   <style>
-    body {
-      background-color: #121212;
-      color: white;
-      font-family: 'Segoe UI', sans-serif;
-      margin: 0;
-      padding: 0;
-    }
-  
-    header,
-    nav,
-    footer {
-      background-color: #1a1a1a;
-      padding: 1rem;
-      text-align: center;
-    }
-  
-    nav a {
-      color: #ffffff;
-      text-decoration: none;
-      margin: 0 1rem;
-      font-weight: bold;
-    }
-  
-    nav a:hover {
-      color: #4f8cff;
-    }
-  
-    .container {
-      max-width: 900px;
-      margin: 2rem auto;
-      padding: 2rem;
-      background-color: #1e1e1e;
-      border-radius: 10px;
-      box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
-    }
-  
-    h1,
-    h2 {
-      color: #4f8cff;
-    }
-  
-    ul {
-      margin-top: 1rem;
-      padding-left: 1.5rem;
-    }
-  
-    li {
-      margin-bottom: 0.5rem;
-    }
-  
-    a {
-      color: #4f8cff;
-    }
-  
-    .top-section {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      gap: 30px;
-      flex-wrap: wrap;
-    }
-  
-    .text-section {
-      flex: 1;
-      min-width: 250px;
-    }
-  
-    .logo-container {
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-      align-items: center;
-    }
-  
-    .logo {
-      width: 100px;
-      background: white;
-      padding: 10px;
-      border-radius: 10px;
-    }
-  
-    .course-table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 20px;
-      margin-bottom: 40px;
-      font-size: 0.95rem;
-    }
-  
-    .course-table th,
-    .course-table td {
-      border: 1px solid #444;
-      padding: 10px;
-      text-align: left;
-    }
-  
-    .course-table th {
-      background-color: #4f8cff;
-      color: white;
-    }
-  
-    .course-table tr:nth-child(even) {
-      background-color: #2a2a2a;
-    }
-  
-    .course-table tr:hover {
-      background-color: #333;
-    }
-  
-    @media (max-width: 700px) {
-      .top-section {
-        flex-direction: column;
-        align-items: center;
-      }
-  
-      .logo-container {
-        flex-direction: row;
-      }
-    }
+    :root {
+  --bg: #121212;
+  --card: #1e1e1e;
+  --surface: #252525;
+  --surface-dark: #1a1a1a;
+  --text: #ffffff;
+  --muted: #cccccc;
+  --accent: #4f8cff;
+  --table-row: #2a2a2a;
+  --table-hover: #333333;
+  --table-border: #444444;
+  --info-box: #2a3f66;
+}
+
+body.light-mode {
+  --bg: #f6f1e8;
+  --card: #fffaf3;
+  --surface: #ece4d7;
+  --surface-dark: #e3dacb;
+  --text: #2f2b27;
+  --muted: #6b6257;
+  --accent: #3f7fe0;
+  --table-row: #f3ece1;
+  --table-hover: #e7ddd0;
+  --table-border: #d4c8b7;
+  --info-box: #dce7f8;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: "Segoe UI", sans-serif;
+  margin: 0;
+  padding: 0;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+header,
+nav,
+footer {
+  background-color: var(--surface-dark);
+  padding: 1rem;
+  text-align: center;
+}
+
+nav a {
+  color: var(--text);
+  text-decoration: none;
+  margin: 0 1rem;
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: var(--accent);
+}
+
+.container {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: var(--card);
+  border-radius: 10px;
+  border: 1px solid rgba(128, 128, 128, 0.15);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+h1,
+h2 {
+  color: var(--accent);
+}
+
+p,
+li,
+td,
+th {
+  color: var(--text);
+}
+
+ul {
+  margin-top: 1rem;
+  padding-left: 1.5rem;
+}
+
+li {
+  margin-bottom: 0.5rem;
+}
+
+a {
+  color: var(--accent);
+}
+
+.top-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.text-section {
+  flex: 1;
+  min-width: 250px;
+}
+
+.logo-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+.logo {
+  width: 100px;
+  background: white;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.course-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  margin-bottom: 40px;
+  font-size: 0.95rem;
+}
+
+.course-table th,
+.course-table td {
+  border: 1px solid var(--table-border);
+  padding: 10px;
+  text-align: left;
+}
+
+.course-table th {
+  background-color: var(--accent);
+  color: white;
+}
+
+.course-table tr:nth-child(even) {
+  background-color: var(--table-row);
+}
+
+.course-table tr:hover {
+  background-color: var(--table-hover);
+}
+
+#theme-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  border: none;
+  border-radius: 50%;
+  background: var(--accent);
+  color: white;
+  font-size: 1.2rem;
+  cursor: pointer;
+  z-index: 1000;
+  box-shadow: 0 4px 12px rgba(0,0,0,.2);
+}
+
+#theme-toggle:hover {
+  transform: translateY(-2px);
+}
+
+@media (max-width: 700px) {
+
+  .top-section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .logo-container {
+    flex-direction: row;
+  }
+
+}
+  .employer-box {
+  margin: 1.5rem 0;
+  padding: 1rem;
+  background-color: var(--info-box);
+  border-left: 5px solid var(--accent);
+  border-radius: 8px;
+  } 
   </style>
 </head>
 
 <body>
-
+  <button id="theme-toggle">☀️</button>
   <header>
     <h1>Victor Stommendal</h1>
   </header>
@@ -154,19 +220,7 @@
 
           <h2>🎓 Studier vid Chalmers – Globala System</h2>
         
-          <div style="
-        
-            margin: 1.5rem 0;
-        
-            padding: 1rem;
-        
-            background-color: #2a3f66;
-        
-            border-left: 5px solid #4f8cff;
-        
-            border-radius: 8px;
-        
-          ">
+          <div class="employer-box"></div>
         
             <strong style="font-size: 1.3rem;">För arbetsgivare</strong><br>
         
@@ -265,5 +319,11 @@
       </div>
   
     </div>
-  
+
   </main>
+ 
+<script src="theme.js"></script>
+
+</body>
+
+</html>
