@@ -1,0 +1,112 @@
+:root {
+    --bg: #121212;
+    --card: #1e1e1e;
+    --surface: #252525;
+    --surface-dark: #1a1a1a;
+    --text: #ffffff;
+    --muted: #cccccc;
+    --accent: #4f8cff;
+    --input-bg: #2a2a2a;
+  
+    --table-row: #2a2a2a;
+    --table-hover: #333333;
+    --table-border: #444444;
+  
+    --info-box: #2a3f66;
+  }
+  
+  body.light-mode {
+    --bg: #f6f1e8;
+    --card: #fffaf3;
+    --surface: #ece4d7;
+    --surface-dark: #e3dacb;
+    --text: #2f2b27;
+    --muted: #6b6257;
+    --accent: #3f7fe0;
+    --input-bg: #f2ece2;
+  
+    --table-row: #f3ece1;
+    --table-hover: #e7ddd0;
+    --table-border: #d4c8b7;
+  
+    --info-box: #dce7f8;
+  }
+  
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-family: "Segoe UI", sans-serif;
+    background-color: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    transition: background-color .3s ease, color .3s ease;
+  }
+  
+  header,
+  nav,
+  footer {
+    background-color: var(--surface-dark);
+  }
+  
+  nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 1rem;
+  }
+  
+  nav a {
+    color: var(--text);
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0.5rem 1rem;
+  }
+  
+  nav a:hover {
+    color: var(--accent);
+  }
+  
+  a {
+    color: var(--accent);
+  }
+  
+  h1,
+  h2,
+  h3 {
+    color: var(--accent);
+  }
+  
+  .container {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: var(--card);
+    border-radius: 10px;
+    border: 1px solid rgba(128,128,128,.15);
+    box-shadow: 0 4px 12px rgba(0,0,0,.08);
+  }
+  
+  #theme-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    border: none;
+    border-radius: 50%;
+    background: var(--accent);
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+    z-index: 1000;
+    box-shadow: 0 4px 12px rgba(0,0,0,.2);
+  }
+  
+  #theme-toggle:hover {
+    transform: translateY(-2px);
+  }

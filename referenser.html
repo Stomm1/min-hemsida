@@ -5,41 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Referenser – Victor Stommendal</title>
   <style>
-    :root {
-      --bg: #121212;
-      --card: #1e1e1e;
-      --text: #ffffff;
-      --accent: #4f8cff;
-    }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-      scroll-behavior: smooth;
-    }
-
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      background-color: var(--bg);
-      color: var(--text);
-      line-height: 1.6;
-    }
-
-    header {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 1rem;
-      padding: 3rem 1rem;
-      background: linear-gradient(to right, #202020, #2a2a2a);
-      flex-wrap: wrap;
-    }
-
-    header h1 {
-      font-size: 2.5rem;
-      color: var(--accent);
-    }
 
     .profile-pic {
       width: 80px;
@@ -47,28 +12,6 @@
       border-radius: 50%;
       object-fit: cover;
       border: 2px solid white;
-    }
-
-    nav {
-      display: flex;
-      justify-content: center;
-      background-color: #1a1a1a;
-      padding: 1rem;
-      flex-wrap: wrap;
-    }
-
-    nav a {
-      color: var(--text);
-      margin: 0.5rem;
-      text-decoration: none;
-      font-weight: bold;
-      padding: 0.5rem 1rem;
-      border-radius: 5px;
-      transition: background 0.3s;
-    }
-
-    nav a:hover {
-      background-color: #333;
     }
 
     .content {
@@ -80,22 +23,15 @@
       box-shadow: 0 0 15px rgba(0,0,0,0.4);
     }
 
-    h2 {
-      color: var(--accent);
-      margin-top: 2rem;
-    }
-
     .ref {
       margin-top: 1rem;
     }
 
-    a {
-      color: var(--accent);
-    }
   </style>
 </head>
+<link rel="stylesheet" href="style.css">
 <body>
-
+  <button id="theme-toggle">☀️</button>
   <header>
     <h1>Victor Stommendal</h1>
   </header>
@@ -139,6 +75,6 @@
       <p>📞 +46 73 987 65 43</p>
     </div>
   </main>
-
+  <script src="theme.js"></script>
 </body>
 </html>
