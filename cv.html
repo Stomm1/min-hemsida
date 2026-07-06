@@ -28,6 +28,7 @@
       top: 0;
       background: rgba(10, 15, 30, 0.8);
       backdrop-filter: blur(10px);
+      z-index: 100;
     }
 
     .logo {
@@ -118,7 +119,7 @@
     }
 
     section {
-      padding: 80px 20px;
+      padding: 60px 20px;
       max-width: 1100px;
       margin: auto;
     }
@@ -154,17 +155,44 @@
       flex-wrap: wrap;
     }
 
-    /* SKILLS */
-    .skills {
+    /* SKILLS & MERITS GRID */
+    .skills-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
     }
 
-    .skill {
+    .skills-block {
       background: #141b2d;
-      padding: 20px;
+      padding: 25px;
       border-radius: 12px;
+      border: 1px solid rgba(255,255,255,0.04);
+    }
+
+    .skills-block h3 {
+      margin-bottom: 15px;
+      color: #8fb7ff;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+      padding-bottom: 8px;
+    }
+
+    .skills-block ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .skills-block li {
+      color: #ccc;
+      margin-bottom: 10px;
+      position: relative;
+      padding-left: 15px;
+    }
+
+    .skills-block li::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      color: #4f8cff;
     }
 
     /* TIMELINE BASE */
@@ -219,17 +247,64 @@
     }
 
     .item h3 {
+      margin-bottom: 2px;
+    }
+
+    .item h4 {
+      color: #8fb7ff;
+      font-weight: normal;
+      font-size: 15px;
       margin-bottom: 5px;
     }
 
     .item span {
       font-size: 12px;
       color: #888;
+      display: block;
+      margin-bottom: 8px;
     }
 
     .item p {
       color: #bbb;
       margin-top: 8px;
+    }
+
+    .item ul {
+      list-style: none;
+      padding: 0;
+      margin-top: 8px;
+      display: inline-block;
+      text-align: left;
+    }
+
+    .item:nth-child(odd) ul {
+      text-align: right;
+    }
+
+    .item ul li {
+      color: #bbb;
+      margin-bottom: 4px;
+      position: relative;
+    }
+
+    .item:nth-child(even) ul li {
+      padding-left: 15px;
+    }
+    .item:nth-child(even) ul li::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      color: #4f8cff;
+    }
+
+    .item:nth-child(odd) ul li {
+      padding-right: 15px;
+    }
+    .item:nth-child(odd) ul li::after {
+      content: "•";
+      position: absolute;
+      right: 0;
+      color: #4f8cff;
     }
 
     /* 💼 ERFARENHET (BLÅ) */
@@ -252,6 +327,13 @@
       box-shadow: 0 0 0 4px rgba(245,197,66,0.15);
     }
 
+    .footer-note {
+      text-align: center;
+      color: #888;
+      margin-top: 30px;
+      font-style: italic;
+    }
+
     @media (max-width: 768px) {
       .timeline::before {
         left: 20px;
@@ -260,12 +342,33 @@
       .item {
         width: 100%;
         left: 0 !important;
-        text-align: left;
+        text-align: left !important;
         padding-left: 60px;
+        padding-right: 20px;
       }
 
       .item::before {
         left: 12px !important;
+      }
+
+      .item ul {
+        text-align: left !important;
+      }
+
+      .item ul li {
+        padding-left: 15px !important;
+        padding-right: 0 !important;
+      }
+
+      .item ul li::before {
+        content: "•" !important;
+        position: absolute !important;
+        left: 0 !important;
+        right: auto !important;
+      }
+
+      .item ul li::after {
+        display: none !important;
       }
     }
   </style>
@@ -278,7 +381,7 @@
   <nav>
     <a href="index.html">Hem</a>
     <a href="#about">Om mig</a>
-    <a href="#skills">Kompetenser</a>
+    <a href="#skills">Kunskaper & Meriter</a>
     <a href="#journey">Erfarenhet</a>
     <a href="#education">Utbildning</a>
   </nav>
@@ -299,42 +402,64 @@
     <h3>Kontakt</h3>
     <p>Victor Stommendal</p>
     <p>📧 <a href="mailto:victor.stommendal@gmail.com">victor.stommendal@gmail.com</a></p>
-    <p>📞 +46 73 395 33 44</p>
-    <p>📍 Trollhättan, Sverige</p>
+    <p>📞 +46 73-395 33 44</p>
+    <p>📍 Nordanvindsvägen 10, 46159 Trollhättan</p>
+    <p>🔗 <a href="https://www.linkedin.com/in/victor-stommendal" target="_blank">LinkedIn - Victor Stommendal</a></p>
   </div>
 
 </div>
 
 <!-- ABOUT -->
 <section id="about">
-  <h2>Om mig</h2>
+  <h2>Inledning</h2>
 
   <div class="about">
     <img src="https://via.placeholder.com/200" alt="profil"/>
 
     <div class="about-text">
       <p>
-        Civilingenjörsstudent på Chalmers med fokus på systemanalys, data och tekniska system.
-        Erfarenhet från industriella ingenjörsprojekt och datadrivna analyser.
+        Civilingenjörsstudent inom Globala system vid Chalmers med erfarenhet från industriella teknikmiljöer på Volvo Group och GKN Aerospace. Har arbetat med dataanalys, visualisering och teknisk kartläggning inom IP och systemarkitektur. Driven av problemlösning, systemtänkande och teknikens roll i hållbar samhällsutveckling.
       </p>
 
       <div class="mini-buttons">
-        <a class="pdf-button" href="Dokument/personligt-brev-svenska.pdf">✉️ Persnoligt brev SV</a>
+        <a class="pdf-button" href="Dokument/personligt-brev-swenska.pdf">✉️ Personligt brev SV</a>
         <a class="pdf-button" href="Dokument/personligt-brev-english.pdf">✉️ Cover letter EN</a>
       </div>
     </div>
   </div>
 </section>
 
-<!-- SKILLS -->
+<!-- SKILLS, LANGUAGES & MERITS -->
 <section id="skills">
-  <h2>Kompetenser</h2>
+  <h2>Kunskaper & Övriga meriter</h2>
 
-  <div class="skills">
-    <div class="skill">Python & Data Analysis</div>
-    <div class="skill">Power BI</div>
-    <div class="skill">System Engineering</div>
-    <div class="skill">Excel & Modellering</div>
+  <div class="skills-grid">
+    <div class="skills-block">
+      <h3>Tekniska kompetenser</h3>
+      <ul>
+        <li>Dataanalys & Visualisering</li>
+        <li>Systemarkitektur & Systemtänkande</li>
+        <li>Patentsökning & IP-kartläggning</li>
+        <li>Modellering & Hållbara lösningar</li>
+      </ul>
+    </div>
+
+    <div class="skills-block">
+      <h3>Språkkunskaper</h3>
+      <ul>
+        <li><strong>Svenska:</strong> modersmål</li>
+        <li><strong>Engelska:</strong> professionell yrkeskunskap</li>
+      </ul>
+    </div>
+
+    <div class="skills-block">
+      <h3>Övriga meriter</h3>
+      <ul>
+        <li>Körkort B (manuell) och AM</li>
+        <li>Programrådsrepresentant på skolan år 2021</li>
+        <li>Grundare och styrelsemedlem i Trollhättan Squash Förening (TSF)</li>
+      </ul>
+    </div>
   </div>
 </section>
 
@@ -344,17 +469,49 @@
 
   <div class="timeline experience">
     <div class="item">
-      <h3>GKN Aerospace</h3>
-      <span>2025 • Praktikant</span>
-      <p>Patentanalys och Power BI-visualisering av teknologidata.</p>
+      <h3>Ingenjörspraktikant</h3>
+      <h4>GKN Aerospace Sweden AB, Trollhättan</h4>
+      <span>2025-06-11 – 2025-08-31</span>
+      <ul>
+        <li>Genomförde patentsökningar i Patsnap för att kartlägga IP-landskap hos ledande konkurrenter</li>
+        <li>Analyserade teknologitrender och konkurrerande lösningar inom flygindustrin</li>
+        <li>Utvecklade en interaktiv Power BI-rapport för visualisering av IP-data</li>
+      </ul>
     </div>
 
     <div class="item">
-      <h3>Volvo Group</h3>
-      <span>2024 • Sommarjobb</span>
-      <p>ECU-arkitektur och systemförståelse inom fordonsindustrin.</p>
+      <h3>Sommarjobb</h3>
+      <h4>Volvo Group, Göteborg</h4>
+      <span>2024-06-01 – 2024-06-28</span>
+      <p>Fortsatte arbete med två tekniska projekt från Tekniksprånget.</p>
+    </div>
+
+    <div class="item">
+      <h3>Tekniksprånget</h3>
+      <h4>Volvo Group, Göteborg</h4>
+      <span>2024-02-05 – 2024-05-31</span>
+      <ul>
+        <li>Deltog i två tekniska projekt inom Solution Architecture (GTT)</li>
+        <li>Arbetade med systemförståelse kring ECU-arkitektur i lastbilar</li>
+        <li>Medverkade i filmad intervju för Volvo Group för att inspirera framtida tekniksprångare</li>
+        <li>Under min tid som tekniksprångare gjorde vi över 50 studiebesök hos olika välkända företag för att se och förstå bredden inom ingenjörsyrket.</li>
+      </ul>
+    </div>
+
+    <div class="item">
+      <h3>Kassabiträde</h3>
+      <h4>ICA Maxi Stormarknad, Trollhättan &amp; ICA Supermarket, Mellerud</h4>
+      <span>2021 – 2024</span>
+      <ul>
+        <li>Sommarjobb</li>
+        <li>Kundservice i högt tempo</li>
+        <li>Varuplock och avdelningsarbete</li>
+        <li>Ansvar för självscanning och posthantering</li>
+      </ul>
     </div>
   </div>
+
+  <p class="footer-note">Kontakta mig om ni vill ha mina referenser/intyg från ovanstående anställningar.</p>
 </section>
 
 <!-- EDUCATION -->
@@ -363,9 +520,24 @@
 
   <div class="timeline education">
     <div class="item">
-      <h3>Chalmers tekniska högskola</h3>
-      <span>2024–nu</span>
-      <p>Civilingenjör i Globala System med fokus på systemanalys och data science.</p>
+      <h3>Högskola – Globala System</h3>
+      <h4>Civilingenjörsutbildning, Chalmers tekniska högskola</h4>
+      <span>2024 – nu</span>
+      <p>Globala system är ett civilingenjörsprogram på Chalmers som kombinerar naturvetenskaplig grund med projektbaserat lärande inom systemtänkande, modellering, dataanalys och hållbara lösningar på samhälleliga utmaningar</p>
+    </div>
+
+    <div class="item">
+      <h3>Gymnasieutbildning</h3>
+      <h4>Nils Ericsongymnasiet</h4>
+      <span>2020 – 2023</span>
+      <p>Naturvetenskapligaprogrammet (Meritvärde: 20,99/22,5)</p>
+    </div>
+
+    <div class="item">
+      <h3>Grundskola</h3>
+      <h4>Björndalsskolan/Paradisskolan</h4>
+      <span>2011 – 2020</span>
+      <p>(Meritvärde: 300/340)</p>
     </div>
   </div>
 </section>
