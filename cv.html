@@ -1,154 +1,121 @@
-<!DOCTYPE html>
-<html lang="sv">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>CV – Victor Stommendal</title>
-
 <style>
-:root{
-  --bg:#121212;
-  --card:#1e1e1e;
-  --text:#ffffff;
-  --muted:#bdbdbd;
-  --accent:#4f8cff;
-}
-
-body{
-  margin:0;
-  font-family:"Segoe UI", sans-serif;
-  background:var(--bg);
-  color:var(--text);
-  line-height:1.6;
-}
-
-/* HEADER */
-header{
-  padding:3rem 1rem;
-  text-align:center;
-  background:linear-gradient(to right,#1f1f1f,#2a2a2a);
-}
-
-header h1{
-  color:var(--accent);
-  font-size:2.8rem;
-}
-
-header p{
-  color:var(--muted);
-  max-width:700px;
-  margin:1rem auto 0;
-}
-
-/* QUICK FACTS */
-.facts{
-  display:flex;
-  justify-content:center;
-  gap:1rem;
-  flex-wrap:wrap;
-  margin-top:1.5rem;
-}
-
-.fact{
-  background:var(--card);
-  padding:0.8rem 1rem;
-  border-radius:8px;
-  font-size:0.9rem;
-  color:var(--muted);
-  border:1px solid #2a2a2a;
-}
-
-/* TIMELINE */
-.timeline{
-  max-width:900px;
-  margin:3rem auto;
-  padding:0 1rem;
-  border-left:2px solid #2a2a2a;
-}
-
-.item{
-  position:relative;
-  margin-bottom:2.5rem;
-  padding-left:1.5rem;
-}
-
-.item::before{
-  content:"";
-  position:absolute;
-  left:-7px;
-  top:6px;
-  width:12px;
-  height:12px;
-  background:var(--accent);
-  border-radius:50%;
-}
-
-.card{
-  background:var(--card);
-  padding:1.5rem;
-  border-radius:10px;
-  border:1px solid #2a2a2a;
-}
-
-.role{
-  color:var(--accent);
-  font-weight:bold;
-}
-
-.meta{
-  color:var(--muted);
-  font-size:0.9rem;
-  margin-bottom:0.8rem;
-}
-</style>
-</head>
-
-<body>
-
-<header>
-  <h1>CV</h1>
-  <p>Ingenjörsstudent på Chalmers med fokus på systemanalys, data och tekniska lösningar inom industri och samhälle.</p>
-
-  <div class="facts">
-    <div class="fact">🎓 Chalmers – Globala System</div>
-    <div class="fact">✈️ Aerospace & industriell analys</div>
-    <div class="fact">📊 Dataanalys & Power BI</div>
-  </div>
-</header>
-
-<div class="timeline">
-
-  <div class="item">
-    <div class="card">
-      <div class="role">GKN Aerospace Sweden AB</div>
-      <div class="meta">Ingenjörspraktikant • 2025 • Trollhättan</div>
-      <p>
-        Patentsökningar i Patsnap, analys av teknologitrender samt utveckling av interaktiv Power BI-rapport för visualisering av IP-data och innovationsmönster.
-      </p>
+    :root{
+      --bg:#121212;
+      --card:#1e1e1e;
+      --text:#ffffff;
+      --muted:#bdbdbd;
+      --accent:#4f8cff;
+    }
+    
+    body{
+      margin:0;
+      font-family:"Segoe UI", sans-serif;
+      background:var(--bg);
+      color:var(--text);
+    }
+    
+    /* TIMELINE WRAPPER */
+    .timeline{
+      max-width:900px;
+      margin:4rem auto;
+      padding:0 1rem;
+      position:relative;
+    }
+    
+    /* vertical line */
+    .timeline::before{
+      content:"";
+      position:absolute;
+      left:20px;
+      top:0;
+      bottom:0;
+      width:2px;
+      background:#2a2a2a;
+    }
+    
+    /* ITEM */
+    .item{
+      position:relative;
+      padding-left:60px;
+      margin-bottom:2.5rem;
+    }
+    
+    /* DOT */
+    .item::before{
+      content:"";
+      position:absolute;
+      left:12px;
+      top:6px;
+      width:16px;
+      height:16px;
+      background:var(--accent);
+      border-radius:50%;
+      box-shadow:0 0 0 4px rgba(79,140,255,0.15);
+    }
+    
+    /* CARD */
+    .card{
+      background:var(--card);
+      padding:1.5rem;
+      border-radius:12px;
+      border:1px solid #2a2a2a;
+      transition:transform .2s ease, box-shadow .2s ease;
+    }
+    
+    .card:hover{
+      transform:translateY(-3px);
+      box-shadow:0 10px 25px rgba(0,0,0,0.4);
+    }
+    
+    /* TEXT */
+    .title{
+      font-size:1.2rem;
+      font-weight:700;
+      color:var(--accent);
+    }
+    
+    .meta{
+      font-size:0.9rem;
+      color:var(--muted);
+      margin:0.3rem 0 1rem 0;
+    }
+    
+    .desc{
+      color:#ddd;
+      line-height:1.5;
+    }
+    </style>
+    
+    <div class="timeline">
+    
+      <div class="item">
+        <div class="card">
+          <div class="title">GKN Aerospace Sweden AB</div>
+          <div class="meta">Ingenjörspraktikant • 2025 • Trollhättan</div>
+          <div class="desc">
+            Patentsökningar i Patsnap, analys av teknologitrender och utveckling av Power BI-dashboard för visualisering av IP-data och innovationsmönster.
+          </div>
+        </div>
+      </div>
+    
+      <div class="item">
+        <div class="card">
+          <div class="title">Volvo Group Trucks Technology</div>
+          <div class="meta">Tekniksprånget & Sommarjobb • 2024 • Göteborg</div>
+          <div class="desc">
+            Arbete inom systemarkitektur med fokus på ECU-arkitektur i tunga fordon och förståelse för komplexa distribuerade system.
+          </div>
+        </div>
+      </div>
+    
+      <div class="item">
+        <div class="card">
+          <div class="title">Chalmers tekniska högskola</div>
+          <div class="meta">Civilingenjör • Globala System • 2024–nu • Göteborg</div>
+          <div class="desc">
+            Systemtänkande, modellering, programmering och dataanalys med fokus på hållbara och samhällskritiska system.
+          </div>
+        </div>
+      </div>
+    
     </div>
-  </div>
-
-  <div class="item">
-    <div class="card">
-      <div class="role">Volvo Group Trucks Technology</div>
-      <div class="meta">Tekniksprånget & Sommarjobb • 2024 • Göteborg</div>
-      <p>
-        Arbete inom systemarkitektur med fokus på ECU-arkitektur i tunga fordon. Bidrog till förståelse för komplexa distribuerade system och vidareutveckling av tekniska projekt från Tekniksprånget.
-      </p>
-    </div>
-  </div>
-
-  <div class="item">
-    <div class="card">
-      <div class="role">Chalmers tekniska högskola</div>
-      <div class="meta">Civilingenjör • Globala System • 2024–nu • Göteborg</div>
-      <p>
-        Systemtänkande, matematisk modellering, programmering och dataanalys med fokus på hållbara och samhällskritiska system.
-      </p>
-    </div>
-  </div>
-
-</div>
-
-</body>
-</html>
