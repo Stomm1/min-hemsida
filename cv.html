@@ -1,3 +1,4 @@
+  <title>Victor Stommendal – CV</title>
 
   <style>
     * {
@@ -89,7 +90,7 @@
       background: #141b2d;
       padding: 20px;
       border-radius: 12px;
-      min-width: 120px;
+      min-width: 160px;
       text-align: center;
     }
 
@@ -104,6 +105,74 @@
       text-align: center;
       margin-bottom: 40px;
       font-size: 32px;
+    }
+
+    /* TIMELINE */
+    .timeline{
+      position: relative;
+      max-width: 900px;
+      margin: auto;
+      padding: 40px 0;
+    }
+
+    .timeline::before{
+      content:"";
+      position:absolute;
+      left:50%;
+      top:0;
+      bottom:0;
+      width:3px;
+      background:#4f8cff;
+      transform:translateX(-50%);
+    }
+
+    .item{
+      position:relative;
+      width:50%;
+      padding:20px 40px;
+    }
+
+    .item:nth-child(odd){
+      left:0;
+      text-align:right;
+    }
+
+    .item:nth-child(even){
+      left:50%;
+      text-align:left;
+    }
+
+    .item::before{
+      content:"";
+      position:absolute;
+      top:25px;
+      width:14px;
+      height:14px;
+      background:#4f8cff;
+      border-radius:50%;
+      box-shadow:0 0 0 4px rgba(79,140,255,0.15);
+    }
+
+    .item:nth-child(odd)::before{
+      right:-7px;
+    }
+
+    .item:nth-child(even)::before{
+      left:-7px;
+    }
+
+    .item h3{
+      margin-bottom:5px;
+    }
+
+    .item span{
+      font-size:12px;
+      color:#888;
+    }
+
+    .item p{
+      color:#bbb;
+      margin-top:8px;
     }
 
     /* ABOUT */
@@ -135,25 +204,6 @@
       background: #141b2d;
       padding: 20px;
       border-radius: 12px;
-    }
-
-    /* TIMELINE */
-    .timeline {
-      border-left: 3px solid #4f8cff;
-      padding-left: 20px;
-    }
-
-    .item {
-      margin-bottom: 30px;
-    }
-
-    .item h3 {
-      margin-bottom: 5px;
-    }
-
-    .item span {
-      font-size: 12px;
-      color: #888;
     }
 
     /* CONTACT */
@@ -191,6 +241,22 @@
       .contact {
         grid-template-columns: 1fr;
       }
+
+      .item{
+        width:100%;
+        left:0 !important;
+        text-align:left;
+        padding-left:60px;
+      }
+
+      .timeline::before{
+        left:20px;
+      }
+
+      .item::before{
+        left:12px !important;
+        right:auto !important;
+      }
     }
   </style>
 </head>
@@ -198,90 +264,98 @@
 <body>
 
 <header>
-  <div class="logo">Titan Folio</div>
+  <div class="logo">Victor Stommendal</div>
   <nav>
-    <a href="#">Home</a>
-    <a href="#">About</a>
-    <a href="#">Skills</a>
-    <a href="#">Journey</a>
-    <a href="#">Contact</a>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#journey">Experience</a>
+    <a href="#contact">Contact</a>
   </nav>
 </header>
 
 <!-- HERO -->
 <div class="hero">
-  <h1>Titan Folio</h1>
-  <p>Creative Developer & Designer</p>
+  <h1>Victor Stommendal</h1>
+  <p>Civilingenjörsstudent • Systemanalys • Data & Engineering</p>
 
   <div class="buttons">
-    <button class="primary">View My Work</button>
-    <button class="secondary">Let’s Talk</button>
+    <button class="primary">Se projekt</button>
+    <button class="secondary">Ladda CV</button>
   </div>
 
   <div class="stats">
-    <div class="card">100+<br>Projects</div>
-    <div class="card">5+<br>Years</div>
-    <div class="card">50+<br>Clients</div>
+    <div class="card">Chalmers<br>Engineering</div>
+    <div class="card">GKN + Volvo<br>Experience</div>
+    <div class="card">Data &<br>Systems</div>
   </div>
 </div>
 
 <!-- ABOUT -->
-<section>
+<section id="about">
   <h2>About Me</h2>
   <div class="about">
     <img src="https://via.placeholder.com/200" alt="profile"/>
     <div class="about-text">
       <p>
-        I’m a passionate developer with experience in building modern web applications.
-        I love UI/UX design, clean code, and creating smooth user experiences.
+        Civilingenjörsstudent på Chalmers med fokus på systemanalys, programmering och dataanalys.
+        Erfarenhet från GKN Aerospace och Volvo Group inom tekniska och datadrivna projekt.
       </p>
     </div>
   </div>
 </section>
 
 <!-- SKILLS -->
-<section>
+<section id="skills">
   <h2>Skills</h2>
   <div class="skills">
-    <div class="skill">Frontend Development</div>
-    <div class="skill">Backend Systems</div>
-    <div class="skill">UI/UX Design</div>
-    <div class="skill">Performance Optimization</div>
+    <div class="skill">Python & Data Analysis</div>
+    <div class="skill">Power BI</div>
+    <div class="skill">System Modeling</div>
+    <div class="skill">Excel & LaTeX</div>
   </div>
 </section>
 
 <!-- TIMELINE -->
-<section>
-  <h2>My Journey</h2>
+<section id="journey">
+  <h2>Experience</h2>
+
   <div class="timeline">
+
     <div class="item">
-      <h3>Computer Science Degree</h3>
-      <span>2018 - 2022</span>
-      <p>Studied software engineering and algorithms.</p>
+      <h3>GKN Aerospace Sweden AB</h3>
+      <span>2025 • Ingenjörspraktikant</span>
+      <p>Patentsökningar, analys av teknologitrender och Power BI-visualisering av IP-data.</p>
     </div>
 
     <div class="item">
-      <h3>Frontend Developer</h3>
-      <span>2022 - 2023</span>
-      <p>Worked on responsive web applications.</p>
+      <h3>Volvo Group Trucks Technology</h3>
+      <span>2024 • Sommarjobb / Tekniksprånget</span>
+      <p>Arbete med ECU-arkitektur och förståelse för komplexa fordonsystem.</p>
     </div>
+
+    <div class="item">
+      <h3>Chalmers tekniska högskola</h3>
+      <span>2024–nu</span>
+      <p>Civilingenjörsprogrammet Globala System med fokus på systemanalys och data science.</p>
+    </div>
+
   </div>
 </section>
 
 <!-- CONTACT -->
-<section>
+<section id="contact">
   <h2>Contact</h2>
   <div class="contact">
     <div>
-      <p>Let’s work together on your next project.</p>
-      <p>Email: hello@example.com</p>
+      <p>Let’s connect and talk engineering or internships.</p>
+      <p>Email: your@email.com</p>
     </div>
 
     <div>
-      <input type="text" placeholder="Your Name"/>
-      <input type="email" placeholder="Your Email"/>
+      <input type="text" placeholder="Name"/>
+      <input type="email" placeholder="Email"/>
       <textarea rows="4" placeholder="Message"></textarea>
-      <button class="send">Send Message</button>
+      <button class="send">Send</button>
     </div>
   </div>
 </section>
