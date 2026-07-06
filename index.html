@@ -260,6 +260,19 @@
       text-align: center;
       margin-top: 1rem;
     }
+
+    :root {
+  --bg: #f5f7fa;
+  --card: #ffffff;
+  --text: #222222;
+  --accent: #4f8cff;
+  }
+
+  .dark-mode {
+  --bg: #121212;
+  --card: #1e1e1e;
+  --text: #ffffff;
+  }
   </style>
 </head>
 <body>
@@ -267,6 +280,8 @@
   <header>
     <h1>Victor Stommendal</h1>
     <img src="Bilder/profilbild.jpg" alt="Profilbild" class="profile-pic" />
+    
+    <button id="theme-toggle">🌙 Dark Mode</button>
   
     <div class="header-subtitle">
       Civilingenjörsstudent på Chalmers • Globala System

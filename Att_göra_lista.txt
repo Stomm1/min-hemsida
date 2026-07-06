@@ -1,5 +1,7 @@
 * Göra klart CV sidan
-* Fixa snyggare knappar ()
+* Fixa snyggare knappar
+* Skriva hemsidan på engelska
+* Göra night/day mode
 * Lägga till projekt och beskriv de befintliga bättre.
 * Skriva in mina nya referenser (Gilles, Rikard Avellan?, ...)
 * Göra så att projekt grejen på stsartsidan blir kortare eller flytta till högerspalten ensam?
