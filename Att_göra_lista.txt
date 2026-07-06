@@ -1,3 +1,4 @@
+* Göra klart CV sidan
 * Lägga till projekt och beskriv de befintliga bättre.
 * Skriva in mina nya referenser (Gilles, Rikard Avellan?, ...)
 * Göra så att projekt grejen på stsartsidan blir kortare eller flytta till högerspalten ensam?
@@ -7,14 +8,16 @@
 
 Gör i denna ordning:
 
-1. Projekt per kurs (STÖRST effekt)
+1. Göra klart CV sidan
+
+2. Projekt per kurs (STÖRST effekt)
 
 👉 detta ger mest “wow”
 
-2. Riktiga referenser
+3. Riktiga referenser
 
 👉 bygger trovärdighet
 
-3. Eventuellt små UI-förbättringar
+4. Eventuellt små UI-förbättringar
 
 👉 kosmetiskt, inte viktigt längre
