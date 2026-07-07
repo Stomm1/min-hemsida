@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Education – Victor Stommendal</title>
+  <link rel="stylesheet" href="style.css" />
+
+  <style>
+
+.top-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.text-section {
+  flex: 1;
+  min-width: 250px;
+}
+
+.logo-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+.logo {
+  width: 100px;
+  background: white;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.course-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  margin-bottom: 40px;
+  font-size: 0.95rem;
+}
+
+.course-table th,
+.course-table td {
+  border: 1px solid var(--table-border);
+  padding: 10px;
+  text-align: left;
+}
+
+.course-table th {
+  background-color: var(--accent);
+  color: white;
+}
+
+.course-table tr:nth-child(even) {
+  background-color: var(--table-row);
+}
+
+.course-table tr:hover {
+  background-color: var(--table-hover);
+}
+
+@media (max-width: 700px) {
+
+  .top-section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .logo-container {
+    flex-direction: row;
+  }
+
+}
+
+.employer-box {
+  margin: 1.5rem 0;
+  padding: 1rem;
+  background-color: var(--info-box);
+  border-left: 5px solid var(--accent);
+  border-radius: 8px;
+}
+
+.info-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 18px;
+  margin: 8px 0;
+  background: var(--surface);
+  color: var(--text);
+  text-decoration: none;
+  border-radius: 10px;
+  font-weight: 600;
+  border: 1px solid rgba(128,128,128,0.2);
+  transition: all 0.25s ease;
+}
+
+.info-button:hover {
+  transform: translateY(-3px);
+  border-color: var(--accent);
+  color: var(--accent);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+  </style>
+</head>
+
+<link rel="stylesheet" href="style.css">
+
+<body>
+  <button id="theme-toggle">☀️</button>
+
+  <header>
+    <h1>Education</h1>
+  </header>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="studier.html">Education</a>
+    <a href="projekt.html">Projects</a>
+    <a href="resor.html">Travel</a>
+    <a href="referenser.html">References</a>
+    <a href="index.html#CV">CV & LinkedIn</a>
+    <a href="index.html#kontakt">Contact</a>
+  </nav>
+
+  <main class="container">
+
+    <div class="top-section">
+    
+    <div class="text-section">
+    
+    <h2>🎓 Bachelor of Science in Engineering – Global Systems</h2>
+    
+    <p>
+    
+    Chalmers University of Technology
+    
+    </p>
+
+        <div class="employer-box">
+
+          <strong style="font-size: 1.3rem;">Global Systems pitch (Swedish)</strong><br>
+
+          A brief overview of the Global Systems Master of Science in Engineering programme and the competencies it provides.
+
+          <br><br>
+
+          <a href="Dokument/Globala_System_Pitch.pdf" target="_blank">
+            📄 Employer Pitch (PDF)
+          </a>
+
+        </div>
+
+        <div class="employer-box">
+
+          <strong style="font-size: 1.3rem;">About the Global Systems Programme</strong><br><br>
+        
+          Global Systems is a Master of Science in Engineering programme at Chalmers University of Technology focused on understanding and analysing complex interactions between technology, society, and natural systems.
+        
+          <br><br>
+        
+          The programme combines mathematics, physics, computer science, data analysis, modelling, and systems thinking to develop the ability to analyse large-scale challenges and create data-driven solutions.
+        
+          <br><br>
+        
+          Through project-based courses and interdisciplinary problem solving, I have developed skills in system analysis, mathematical modelling, programming, simulation, and understanding how different components interact within complex systems.
+        
+          <br><br>
+        
+          The programme prepares engineers to work with areas such as sustainable development, data science, artificial intelligence, socio-technical systems, energy systems, and other complex engineering challenges.
+        
+        </div>
+
+        <p>
+          Learn more about the Global Systems engineering programme:
+        </p>
+        
+        <a class="info-button" 
+           href="https://www.chalmers.se/utbildning/hitta-program/globala-system-civilingenjor/" 
+           target="_blank">
+          🎓 Chalmers Global Systems Programme
+        </a>
+        
+        <p>
+          Access the official programme syllabus and course descriptions:
+        </p>
+        
+        <a class="info-button" 
+           href="https://www.chalmers.se/en/education/your-studies/find-course-and-programme-syllabi/programme-overview/TKGBS/?syllabusAcYear=2026%2F2027&year=1&view=year" 
+           target="_blank">
+          📚 Programme Syllabus & Course Overview
+        </a>
+
+        <p>
+          Below are courses and results from my studies in the Global Systems Master of Science in Engineering programme at Chalmers.
+        </p>
+
+        <h2>Year 1</h2>
+
+        <table class="course-table">
+          <tr>
+            <th>Course</th>
+            <th>Course Code</th>
+            <th>Pass Rate</th>
+            <th>Average Grade</th>
+            <th>My Score</th>
+            <th>Grade</th>
+          </tr>
+
+          <tr><td>Computational Tools</td><td>MVE626</td><td>100%</td><td>3.35</td><td>-</td><td>3</td></tr>
+          <tr><td>Single Variable Calculus</td><td>MVE620</td><td>78.6%</td><td>3.81</td><td>31/50</td><td>4</td></tr>
+          <tr><td>Evolution and Self-Organization in Biological Systems</td><td>SEE075</td><td>95.4%</td><td>4.1</td><td>23/30</td><td>4</td></tr>
+          <tr><td>Global Systems</td><td>SEE070</td><td>96.4%</td><td>-</td><td>-</td><td>Pass</td></tr>
+          <tr><td>Earth as a System</td><td>SEE060</td><td>92.3%</td><td>3.78</td><td>27.5/50</td><td>3</td></tr>
+          <tr><td>Linear Algebra</td><td>SEE086</td><td>75.6%</td><td>3.66</td><td>25/50</td><td>4</td></tr>
+          <tr><td>Mechanics 1</td><td>SEE081</td><td>79.4%</td><td>3.78</td><td>16.5/30</td><td>3</td></tr>
+          <tr><td>Order and Disorder in Physical Systems</td><td>SEE065</td><td>90.5%</td><td>4.35</td><td>42/50</td><td>5</td></tr>
+          <tr><td>Applied Mathematical Thinking</td><td>DAT435</td><td>99.1%</td><td>4.19</td><td>-</td><td>4</td></tr>
+        </table>
+
+        <h2>Year 2</h2>
+
+        <table class="course-table">
+          <tr>
+            <th>Course</th>
+            <th>Course Code</th>
+            <th>Pass Rate</th>
+            <th>Average Grade</th>
+            <th>My Score</th>
+            <th>Grade</th>
+          </tr>
+
+          <tr><td>Climate Modelling</td><td>SEE110</td><td>100%</td><td>-</td><td>-</td><td>Pass</td></tr>
+          <tr><td>Mathematical Modelling and Problem Solving</td><td>DAT605</td><td>100%</td><td>-</td><td>-</td><td>Pass</td></tr>
+          <tr><td>Fundamental Software Development</td><td>DAT506</td><td>69%</td><td>4.59</td><td>42/60</td><td>4</td></tr>
+          <tr><td>Socio-Technical Systems</td><td>TEK820</td><td>98.7%</td><td>4.53</td><td>124/150</td><td>4</td></tr>
+          <tr><td>Multivariable Calculus</td><td>MVE655</td><td>29%</td><td>3.38</td><td>20.5/50</td><td>3</td></tr>
+          <tr><td>Statistics and Probability Theory</td><td>MVE650</td><td>58%</td><td>3.68</td><td>19/30</td><td>4</td></tr>
+          <tr><td>Electromagnetic Fields and Waves</td><td>SEE105</td><td>50%</td><td>3.31</td><td>29/60</td><td>3</td></tr>
+          <tr><td>Introduction to Data Science and AI</td><td>DAT566</td><td>84.4%</td><td>-</td><td>33.32/48</td><td>Pass</td></tr>
+          <tr><td>Society as a System</td><td>TEK915</td><td>91.3%</td><td>3.99</td><td>101.42/150</td><td>3</td></tr>
+        </table>
+
+      </div>
+
+      <div class="logo-container">
+        <img src="Bilder/chalmers.png" alt="Chalmers Logo" class="logo">
+
+        <img src="Bilder/globala-systems.png" alt="Global Systems Logo" class="logo">
+      </div>
+
+    </div>
+
+  </main>
+
+  <script src="theme.js"></script>
+
+</body>
+</html>
