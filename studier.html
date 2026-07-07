@@ -84,6 +84,29 @@
   border-radius: 8px;
 }
 
+.info-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 18px;
+  margin: 8px 0;
+  background: var(--surface);
+  color: var(--text);
+  text-decoration: none;
+  border-radius: 10px;
+  font-weight: 600;
+  border: 1px solid rgba(128,128,128,0.2);
+  transition: all 0.25s ease;
+}
+
+.info-button:hover {
+  transform: translateY(-3px);
+  border-color: var(--accent);
+  color: var(--accent);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
   </style>
 </head>
 
@@ -149,19 +172,23 @@
         </div>
 
         <p>
-          Read more about Global Systems on the Chalmers website:
+          Learn more about the Global Systems engineering programme:
         </p>
-
-        <a href="https://www.chalmers.se/utbildning/hitta-program/globala-system-civilingenjor/" target="_blank">
-          Global Systems
+        
+        <a class="info-button" 
+           href="https://www.chalmers.se/utbildning/hitta-program/globala-system-civilingenjor/" 
+           target="_blank">
+          🎓 Chalmers Global Systems Programme
         </a>
-
+        
         <p>
-          Programme syllabus and course descriptions can be found here:
+          Access the official programme syllabus and course descriptions:
         </p>
-
-        <a href="https://www.chalmers.se/en/education/your-studies/find-course-and-programme-syllabi/programme-overview/TKGBS/?syllabusAcYear=2026%2F2027&year=1&view=year" target="_blank">
-          Programme Syllabus and Course Descriptions for Global Systems
+        
+        <a class="info-button" 
+           href="https://www.chalmers.se/en/education/your-studies/find-course-and-programme-syllabi/programme-overview/TKGBS/?syllabusAcYear=2026%2F2027&year=1&view=year" 
+           target="_blank">
+          📚 Programme Syllabus & Course Overview
         </a>
 
         <p>
