@@ -97,6 +97,11 @@
   h3 {
     color: var(--accent);
   }
+
+  .read-more-btn {
+    display: inline-flex;
+    margin-top: 20px;
+  }
   
   .container {
     max-width: 1000px;
