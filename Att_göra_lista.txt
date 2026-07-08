@@ -1,28 +1,20 @@
-* Göra klart CV sidan
-* Fixa snyggare knappar
-* Skriva hemsidan på engelska
-* Göra night/day mode
 * Lägga till projekt och beskriv de befintliga bättre.
 * Skriva in mina nya referenser (Gilles, Rikard Avellan?, ...)
-* Göra så att projekt grejen på stsartsidan blir kortare eller flytta till högerspalten ensam?
+* Rekommendationsbrev från Richard Avallan?
 * Fixa TSF hemsidan
 
 🧭 Rekommendation (prioritering)
 
 Gör i denna ordning:
 
-1. Göra klart CV sidan
-
-2. Fixa snyggare knappar där det behövs
-
-3. Projekt per kurs (STÖRST effekt)
+1. Projekt per kurs (STÖRST effekt)
 
 👉 detta ger mest “wow”
 
-4. Riktiga referenser
+2. Riktiga referenser
 
 👉 bygger trovärdighet
 
-5. Eventuellt små UI-förbättringar
+3. Eventuellt små UI-förbättringar
 
 👉 kosmetiskt, inte viktigt längre
