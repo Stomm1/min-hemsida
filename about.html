@@ -2,52 +2,80 @@
 <html lang="en">
 <head>
   <style>
-   .about-image {
-  width: 320px;
-  margin: 1rem 2rem;
+   .about-page {
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 2rem;
 }
+
+.about-page h2 {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+
+.about-section {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+  margin-bottom: 3rem;
+}
+
+
+.about-section.reverse {
+  flex-direction: row-reverse;
+}
+
+
+.about-text {
+  flex: 1;
+  line-height: 1.8;
+  color: var(--text);
+}
+
+
+.about-image {
+  flex: 0 0 260px;
+  margin: 0;
+}
+
 
 .about-image img {
   width: 100%;
-  height: 260px;
+  height: 200px;
   object-fit: cover;
   border-radius: 15px;
   box-shadow: 0 8px 25px rgba(0,0,0,0.15);
 }
 
+
 .about-image figcaption {
-  margin-top: 0.5rem;
+  margin-top: 0.6rem;
   color: var(--muted);
   font-size: 0.85rem;
   font-style: italic;
   text-align: center;
 }
 
-/* Varannan bild vänster/höger */
-.about-image:nth-of-type(odd) {
-  float: right;
-}
 
-.about-image:nth-of-type(even) {
-  float: left;
-}
-
-
-/* Gör så att texten inte hoppar konstigt efter bilder */
-.container p {
+.about-final {
+  margin-top: 2rem;
   line-height: 1.8;
-  text-align: justify;
+  padding-bottom: 2rem;
 }
 
 
-/* Mobilanpassning */
-@media(max-width:700px) {
+@media(max-width:800px) {
+
+  .about-section,
+  .about-section.reverse {
+    flex-direction: column;
+  }
+
 
   .about-image {
-    float: none !important;
-    width: 100%;
-    max-width: 400px;
-    margin: 2rem auto;
+    width:100%;
+    max-width:400px;
   }
 
 }
@@ -77,96 +105,168 @@
     <a href="index.html#kontakt">Contact</a>
   </nav>
 
-  <main class="about-section">
+  <main class="container">
 
-    <h2>Victor Stommendal</h2>
-    
-    <div class="about-block">
-    
-      <div class="about-text">
-        <p>
-        So, you want to know more about me – then you’re in the right place!
-        I’m Victor, an engineering student at Chalmers University of Technology, 
-        currently studying Global Systems. I was born and raised in Trollhättan, 
-        Sweden – a city with a strong connection to engineering and industry.
-        Growing up in Trollhättan, I was surrounded by my family, including my parents 
-        and my younger brother. They have played an important role in shaping who I am 
-        today, and I could probably write an entire chapter about the experiences, 
-        memories, and lessons they have given me. However, this page is not meant to 
-        be a full autobiography (maybe that will be a future project), so I will leave 
-        it at saying that I am very grateful for the support and inspiration they have 
-        given me throughout my life.
-        </p>
-    
-      </div>
-      <figure class="about-image">
-        <img src="Bilder/brorsorna.png" alt="Victor with his brother">
-        <figcaption>
-          Me and my brother – growing up in Trollhättan, Sweden.
-        </figcaption>
-      </figure>
-    </div>
-    
-    <div class="about-block reverse">
-      <figure class="about-image">
-        <img src="Bilder/backpacking.png" alt="Backpacking adventure">
-        <figcaption>
-          Backpacking and exploring new cultures – one of my favourite ways to learn and grow.
-        </figcaption>
-      </figure>
-    
-      <div class="about-text">
-        <p>
-        I have always been curious about how things work and, perhaps even more 
-        importantly, how different parts influence each other. This curiosity is 
-        what led me towards engineering and eventually to Global Systems – a programme 
-        focused on understanding complex interactions between technology, society, 
-        and natural systems.
-        During my studies, I have developed a strong interest in data analysis, 
-        programming, modelling, and using engineering methods to solve complex problems.
-        Through experiences at companies such as Volvo Group and GKN Aerospace, I have 
-        gained insight into how engineering is applied in real industrial environments, 
-        from system architecture to technology analysis and data visualization.
-        Outside engineering, I enjoy exploring the world around me – both literally 
-        and scientifically. I have travelled to over 20 countries, experiencing 
-        different cultures, environments, and ways of thinking.
-        Travelling has taught me to be adaptable, curious, and open to new perspectives, 
-        which I believe are valuable qualities both personally and professionally.
-        </p>
-      </div>
-    </div>
-    
-    <div class="about-block">
-      <div class="about-text">
-        <p>
-        When I’m not studying, you will probably find me playing squash, travelling, 
-        working on personal projects, or exploring new areas of technology.
-        I enjoy challenges, whether it is solving a difficult mathematical problem, 
-        understanding a complex system, or learning something completely new.
-        As a person, I would describe myself as calm, goal-oriented, and curious. 
-        I like working together with others and believe that the best solutions often 
-        come from combining different perspectives.
-        At the same time, I have a competitive side – something that has followed me 
-        from sports to engineering projects (and occasionally board games).
-        </p>
-    
-      </div>
-      <figure class="about-image">
-        <img src="Bilder/skidor.png" alt="Skiing in Norway">
-        <figcaption>
-          Skiing in Norway with my family – one of many ways I enjoy spending time outdoors.
-        </figcaption>
-      </figure>
-    </div>
+    <main class="about-page">
 
-    <div class="about-final">
-    <p>
-    Looking ahead, I hope to work at the intersection between technology, data, 
-    and sustainable development.
-    I am especially interested in how engineering and data-driven solutions can 
-    help solve some of the complex challenges facing society today.
-    </p>
-    </div>
+      <h2>Victor Stommendal</h2>
+      
+      
+      <div class="about-section">
+      
+        <div class="about-text">
+          <p>
+            So, you want to know more about me – then you’re in the right place!
+      
+            I’m Victor, an engineering student at Chalmers University of Technology, 
+            currently studying Global Systems. I was born and raised in Trollhättan, 
+            Sweden – a city with a strong connection to engineering and industry.
+      
+            Growing up in Trollhättan, I was surrounded by my family, including my parents 
+            and my younger brother. They have played an important role in shaping who I am 
+            today, and I could probably write an entire chapter about the experiences, 
+            memories, and lessons they have given me.
+      
+            However, this page is not meant to be a full autobiography (maybe that will be 
+            a future project), so I will leave it at saying that I am very grateful for 
+            the support and inspiration they have given me throughout my life.
+          </p>
+        </div>
+      
+      
+        <figure class="about-image">
+          <img src="Bilder/brorsorna.png" alt="Victor with his brother">
+      
+          <figcaption>
+            Me and my brother – growing up in Trollhättan, Sweden.
+          </figcaption>
+      
+        </figure>
+      
+      </div>
+      
+      
+      
+      <div class="about-section reverse">
+      
+        <div class="about-text">
+      
+          <p>
+            I have always been curious about how things work and, perhaps even more 
+            importantly, how different parts influence each other.
+      
+            This curiosity is what led me towards engineering and eventually to 
+            Global Systems – a programme focused on understanding complex interactions 
+            between technology, society, and natural systems.
+      
+            During my studies, I have developed a strong interest in data analysis, 
+            programming, modelling, and using engineering methods to solve complex problems.
+      
+            Through experiences at companies such as Volvo Group and GKN Aerospace, 
+            I have gained insight into how engineering is applied in real industrial 
+            environments, from system architecture to technology analysis and data visualization.
+          </p>
+      
+        </div>
+      
+      
+        <figure class="about-image">
+      
+          <img src="Bilder/backpacking.png" alt="Backpacking adventure">
+      
+          <figcaption>
+            Backpacking and exploring new cultures – one of my favourite ways to learn and grow.
+          </figcaption>
+      
+        </figure>
+      
+      </div>
+      
+      
+      
+      
+      <div class="about-section">
+      
+      
+        <div class="about-text">
+      
+          <p>
+      
+            Outside engineering, I enjoy exploring the world around me – both literally 
+            and scientifically.
+      
+            I have travelled to over 20 countries, experiencing different cultures, 
+            environments, and ways of thinking.
+      
+            Travelling has taught me to be adaptable, curious, and open to new perspectives, 
+            which I believe are valuable qualities both personally and professionally.
+      
+            When I’m not studying, you will probably find me playing squash, travelling, 
+            working on personal projects, or exploring new areas of technology.
+      
+            I enjoy challenges, whether it is solving a difficult mathematical problem, 
+            understanding a complex system, or learning something completely new.
+      
+          </p>
+      
+        </div>
+      
+      
+        <figure class="about-image">
+      
+          <img src="Bilder/skidor.png" alt="Skiing in Norway">
+      
+          <figcaption>
+            Skiing in Norway with my family – one of many ways I enjoy spending time outdoors.
+          </figcaption>
+      
+        </figure>
+      
+      
+      </div>
+      
+      
+      
+      
+      <div class="about-section reverse">
+      
+        <div class="about-text">
+      
+          <p>
+      
+            As a person, I would describe myself as calm, goal-oriented, and curious.
+      
+            I like working together with others and believe that the best solutions often 
+            come from combining different perspectives.
+      
+            At the same time, I have a competitive side – something that has followed me 
+            from sports to engineering projects (and occasionally board games).
+      
+          </p>
+      
+        </div>
+      
+      
+      </div>
+      
+      
+      
+      <div class="about-final">
+      
+      <p>
+      
+        Looking ahead, I hope to work at the intersection between technology, data, 
+        and sustainable development.
+      
+        I am especially interested in how engineering and data-driven solutions can 
+        help solve some of the complex challenges facing society today.
+      
+      </p>
+      
+      </div>
+      
+      
+      </main>
    
     <h2>🌍 Countries I Have Visited</h2>
 
