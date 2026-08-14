@@ -129,19 +129,86 @@ opacity:0.9;
 
 @media (max-width: 700px) {
 
-header h1 {
-  font-size: 2.2rem;
+/* HEADER */
+header {
+  padding: 2rem 1rem;
 }
 
-.container {
-  margin: 1rem;
-  padding: 1rem;
+header h1 {
+  font-size: 2.2rem;
+  line-height: 1.2;
+}
+
+/* NAVIGATION */
+nav {
+  padding: 0.7rem;
+  gap: 0.2rem;
 }
 
 nav a {
-  margin: 0.3rem;
+  margin: 0.2rem 0.4rem;
+  font-size: 0.9rem;
 }
 
+/* EDUCATION CARDS */
+.education-container {
+  grid-template-columns: 1fr;
+  margin: 1rem;
+  padding: 0;
+  gap: 1.5rem;
+}
+
+.education-card {
+  padding: 1.3rem;
+}
+
+/* IMAGES */
+.education-card img {
+  width: 100%;
+  height: 130px;
+  margin-bottom: 1rem;
+}
+
+/* TEXT */
+.education-card h2 {
+  font-size: 1.35rem;
+  line-height: 1.3;
+}
+
+.education-card h3 {
+  font-size: 1.1rem;
+}
+
+.education-card p {
+  font-size: 0.95rem;
+}
+
+/* TAGS */
+.tags {
+  margin: 0.8rem 0;
+}
+
+.tags span {
+  padding: 5px 10px;
+  margin: 3px;
+  font-size: 0.8rem;
+}
+
+/* BUTTON */
+.education-button {
+  display: block;
+  text-align: center;
+  width: 100%;
+}
+
+/* THEME BUTTON */
+#theme-toggle {
+  width: 40px;
+  height: 40px;
+  top: 10px;
+  right: 10px;
+  font-size: 1rem;
+}
 }
 
 
