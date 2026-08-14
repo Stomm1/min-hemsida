@@ -326,21 +326,123 @@
     }
 
     @media (max-width: 768px) {
-      .timeline::before {
-        left: 20px;
-      }
 
-      .item {
-        width: 100%;
-        left: 0 !important;
-        padding-left: 60px;
-        padding-right: 20px;
-      }
+/* HEADER / MENU */
+header {
+  position: relative;
+  flex-direction: column;
+  gap: 15px;
+  padding: 20px 15px;
+}
 
-      .item::before {
-        left: 12px !important;
-      }
-    }
+.logo {
+  font-size: 18px;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 6px;
+}
+
+nav a {
+  margin: 4px 6px;
+  font-size: 13px;
+}
+
+/* HERO */
+.hero {
+  padding: 45px 15px 30px;
+}
+
+.hero h1 {
+  font-size: 34px;
+  line-height: 1.2;
+}
+
+.hero p {
+  font-size: 16px;
+}
+
+.action-buttons {
+  flex-direction: column;
+  align-items: stretch;
+  max-width: 350px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.pdf-button {
+  justify-content: center;
+}
+
+.contact-card {
+  max-width: 100%;
+}
+
+/* INTRODUCTION */
+section {
+  padding: 45px 15px;
+}
+
+h2 {
+  font-size: 27px;
+  margin-bottom: 30px;
+}
+
+.about {
+  flex-direction: column;
+  gap: 25px;
+  text-align: center;
+}
+
+.about img {
+  width: 150px;
+  height: 150px;
+}
+
+.about-text {
+  width: 100%;
+  flex: none;
+  text-align: left;
+}
+
+/* SKILLS */
+.skills-grid {
+  grid-template-columns: 1fr;
+  gap: 15px;
+}
+
+.skills-block {
+  padding: 20px;
+}
+
+/* TIMELINE */
+.timeline {
+  padding: 25px 0;
+}
+
+.timeline::before {
+  left: 20px;
+}
+
+.item {
+  width: 100%;
+  left: 0 !important;
+  padding-left: 60px;
+  padding-right: 10px;
+}
+
+.item::before {
+  left: 12px !important;
+}
+
+.job-logo {
+  width: 55px;
+  height: 55px;
+}
+}
   </style>
 </head>
 
